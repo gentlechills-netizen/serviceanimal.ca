@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^1-legal-info-for-all/?$ /1-Legal-Info-for-All/ [R=301,L,NE]
+RewriteRule ^2-carry-on-access-notice-for-users/?$ /2-Carry-On-Access-Notice-for-Users/ [R=301,L,NE]
+RewriteRule ^3-how-to-obtain-medical-letter/?$ /3-How-to-Obtain-Medical-Letter/ [R=301,L,NE]
+RewriteRule ^4-how-to-complain/?$ /4-How-to-Complain/ [R=301,L,NE]
+ErrorDocument 404 /404.html

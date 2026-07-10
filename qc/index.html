@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guide d'accès pour chien — Québec</title><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128.png">
+<style>
+/* === RESET === */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+/* === VARIABLES === */
+:root{--navy:#16213e;--light:#f5f6fa;--blue:#2563eb;--white:#fff;--text:#1a1a2e;--border:#e0e7ff;--gray:#64748b;--radius:10px;--shadow:0 1px 4px rgba(0,0,0,.08)}
+/* === BASE === */
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,sans-serif;color:var(--text);background:var(--light);line-height:1.6}
+/* === HEADER === */
+header{background:var(--navy);color:var(--white);padding:0.6rem 1rem;min-height:64px;display:flex;align-items:center}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0.75rem;flex-wrap:wrap}
+.header-logo{height:48px;width:auto;flex-shrink:0}
+.header-text{text-align:center}
+header h1{font-size:1.2rem;margin:0;line-height:1.3}
+header p{font-size:0.78rem;opacity:0.8;margin-top:0.05rem}
+/* === PROVINCE SELECTOR === */
+.province-selector{display:flex;align-items:center;gap:0.35rem}
+.province-selector label{font-size:0.78rem;opacity:0.9;white-space:nowrap}
+.province-selector select{padding:0.3rem 0.4rem;border-radius:5px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.12);color:var(--white);font-size:0.82rem;cursor:pointer;max-width:160px}
+.province-selector select option{background:var(--navy);color:var(--white)}
+/* === HAMBURGER === */
+.hamburger{display:none;background:none;border:none;color:var(--white);font-size:1.6rem;cursor:pointer;padding:0.2rem;line-height:1;margin-left:auto}
+/* === LAYOUT === */
+.page-layout{display:flex;gap:1.5rem;max-width:1200px;margin:1rem auto;padding:0 1rem}
+/* === SIDEBAR === */
+.page-layout nav.sidebar{width:220px;flex-shrink:0;position:sticky;top:0.5rem;align-self:flex-start;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:0.5rem 0;max-height:calc(100vh - 1rem);overflow-y:auto}
+nav.sidebar a{display:block;padding:0.4rem 0.75rem;color:var(--navy);text-decoration:none;font-size:0.82rem;border-left:3px solid transparent;transition:background 0.15s,border-color 0.15s}
+nav.sidebar a:hover,nav.sidebar a.active{background:var(--border);border-left-color:var(--blue);font-weight:600}
+nav.sidebar .part-label{font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--gray);padding:0.5rem 0.75rem 0.15rem;border-left-color:transparent}
+nav.sidebar .part-label:hover{background:transparent;border-left-color:transparent}
+/* === MAIN === */
+main{flex:1;min-width:0;background:var(--white);padding:1.5rem 2rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+main h1{font-size:1.6rem;margin-bottom:0.75rem;color:var(--navy);border-bottom:2px solid var(--border);padding-bottom:0.4rem}
+main h2{font-size:1.2rem;margin:1.25rem 0 0.5rem;color:#1e3a5f}
+main h3{font-size:1.05rem;margin:1rem 0 0.4rem;color:#2d4a74}
+main p{margin-bottom:0.75rem}
+main a{color:var(--blue);text-decoration:underline}
+main ul,main ol{margin:0.4rem 0 0.75rem 1.5rem}
+main li{margin-bottom:0.2rem}
+main hr{margin:1.2rem 0;border:none;border-top:1px solid var(--border)}
+main blockquote{background:#f0f4ff;border-left:4px solid var(--blue);padding:0.6rem 1rem;margin:0.75rem 0;border-radius:0 6px 6px 0}
+main .btn{display:inline-block;background:var(--blue);color:var(--white)!important;text-decoration:none!important;padding:0.5rem 1.1rem;border-radius:6px;font-weight:600;font-size:0.88rem;transition:background 0.2s}
+main .btn:hover{background:#1d4ed8}
+main .btn-outline{display:inline-block;background:transparent;color:var(--blue)!important;text-decoration:none!important;padding:0.45rem 1rem;border-radius:6px;font-weight:600;font-size:0.88rem;border:2px solid var(--blue);transition:all 0.2s}
+main .btn-outline:hover{background:var(--blue);color:var(--white)!important}
+/* === PART NAV (PILLS) === */
+.part-nav{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;padding:0.75rem;background:var(--light);border-radius:8px}
+.part-nav a{display:inline-block;padding:0.35rem 0.65rem;color:var(--navy);text-decoration:none;border-radius:5px;font-size:0.82rem;background:var(--white);border:1px solid var(--border);transition:all 0.15s}
+.part-nav a:hover{background:var(--blue);color:var(--white);border-color:var(--blue)}
+/* === SECTIONS === */
+.part{scroll-margin-top:1rem;padding-top:0.5rem}
+.part h2{display:flex;align-items:center;gap:0.5rem;border-bottom:2px solid var(--border);padding-bottom:0.35rem}
+.part h2.lang-fr{display:none!important}
+body.fr .part h2.lang-en{display:none}
+body.fr .part h2.lang-fr{display:flex}
+.part h2 .part-num{background:var(--navy);color:var(--white);font-size:0.75rem;border-radius:50%;width:1.6em;height:1.6em;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+/* === FOOTER === */
+footer{text-align:center;padding:1.25rem;color:var(--gray);font-size:0.78rem;margin-top:1rem;border-top:1px solid var(--border);background:var(--white)}
+/* === BACK TO TOP === */
+.back-top{display:block;text-align:right;font-size:0.8rem;margin-top:0.5rem}
+/* === RESPONSIVE === */
+@media(max-width:768px){
+  header{padding:0.5rem 0.6rem}
+  .header-inner{gap:0.4rem}
+  .header-logo{height:38px}
+  .header-text{min-width:140px}
+  header h1{font-size:1rem}
+  header p{font-size:0.72rem}
+  .province-selector{order:3;width:100%}
+  .province-selector select{width:100%;max-width:none}
+  .hamburger{display:block;order:2}
+  .page-layout{flex-direction:column;padding:0 0.5rem;margin:0.5rem auto}
+  .page-layout nav.sidebar{width:100%;display:none;position:static;max-height:none;margin-bottom:0;border-radius:var(--radius)}
+  .page-layout nav.sidebar.open{display:block}
+  main{padding:1rem;border-radius:8px}
+  main h1{font-size:1.3rem}
+  .part-nav{gap:0.25rem;padding:0.5rem}
+  .part-nav a{font-size:0.78rem;padding:0.3rem 0.5rem}
+}
+@media(min-width:769px){
+  .page-layout nav.sidebar{display:block!important}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<a href="/"><img src="/logo-balance.png" alt="Balance - Guide d'accès" class="header-logo"></a>
+<div class="header-text">
+<h1>Guide d'accès pour chien — Québec</h1>
+<p>Droits et obligations des chiens d'assistance</p>
+</div>
+<div class="province-selector">
+<label for="province">Province :</label>
+<select id="province" onchange="window.location.href=this.value">
+<option value="/on/">Ontario</option>
+<option value="/qc/" selected>Québec</option>
+<option value="/bc/">British Columbia</option>
+<option value="/ab/">Alberta</option>
+<option value="/sk/">Saskatchewan</option>
+<option value="/mb/">Manitoba</option>
+<option value="/ns/">Nova Scotia</option>
+<option value="/nb/">New Brunswick</option>
+<option value="/pe/">Prince Edward Island</option>
+<option value="/nl/">Newfoundland &amp; Labrador</option>
+<option value="/yt/">Yukon</option>
+<option value="/nt/">Northwest Territories</option>
+<option value="/nu/">Nunavut</option>
+</select>
+</div>
+<button class="hamburger" onclick="document.querySelector('.page-layout nav.sidebar').classList.toggle('open');this.classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
+</header>
+<div class="page-layout">
+<nav class="sidebar">
+<a class="part-label" href="#part1">Partie 1 — Réponse terrain</a>
+<a href="#part1">Que faire face à un refus</a>
+<a class="part-label" href="#part2">Partie 2 — Cadre juridique</a>
+<a href="#part2">La Charte des droits</a>
+<a class="part-label" href="#part3">Partie 3 — Définitions clés</a>
+<a href="#part3">Qui est protégé</a>
+<a class="part-label" href="#part4">Partie 4 — Recours</a>
+<a href="#part4">Comment porter plainte</a>
+<a class="part-label" href="#part5">Partie 5 — Exceptions</a>
+<a href="#part5-handler">Responsabilités du maître-chien</a>
+</nav>
+<main>
+<div class="part-nav">
+<a href="#part1">1. Réponse terrain</a>
+<a href="#part2">2. Cadre juridique</a>
+<a href="#part3">3. Définitions</a>
+<a href="#part4">4. Recours</a>
+<a href="#part5">5. Exceptions</a>
+</div>
+
+<section id="part1" class="part">
+<h2><span class="part-num">1</span> Réponse terrain — Que faire face à un refus d'accès</h2>
+
+<p>La <em>Charte des droits et libertés de la personne du Québec</em> (RLRQ c. C-12) vous protège contre la discrimination fondée sur le handicap. Vous avez le droit d'accéder aux lieux publics avec votre chien d'assistance. Face à un refus :</p>
+
+<ol>
+<li><strong>Restez calme</strong> : « Ce chien est mon animal d'assistance. En vertu de la Charte québécoise, vous devez me permettre d'entrer. »</li>
+<li><strong>Montrez la loi</strong> : Ouvrez <a href="https://www.cdpdj.qc.ca/fr/vos-obligations/motifs-interdits/handicap-animaux" target="_blank" rel="noopener">cette page CDPDJ</a> ou citez l'article 10 de la Charte (RLRQ c. C-12) qui interdit la discrimination.</li>
+<li><strong>Parlez au gestionnaire</strong> : Les employés de première ligne ne connaissent pas toujours la loi.</li>
+<li><strong>Ne partez pas volontairement</strong> : Si on vous somme de quitter les lieux, dites : « Je vais déposer une plainte à la Commission des droits de la personne. »</li>
+<li><strong>Documentez</strong> : Notez la date, l'heure, le lieu, les noms et les paroles échangées.</li>
+<li><strong>Quittez si nécessaire</strong> : Si la situation dégénère, partez et portez plainte ensuite. Votre sécurité avant tout.</li>
+</ol>
+
+<h3>Questions qu'on peut vous poser</h3>
+<p>Le Québec n'a <strong>pas de loi spécifique</strong> encadrant les animaux d'assistance (contrairement à l'Ontario, l'Alberta et la C.-B.). En pratique :</p>
+<ul>
+<li>Un commerçant <strong>peut</strong> demander à quoi sert votre chien, mais ne peut exiger de preuve médicale ni de certificat d'entraînement.</li>
+<li><strong>Aucune lettre médicale n'est requise</strong> pour l'accès aux lieux publics.</li>
+<li>L'<strong>identification visuelle</strong> (harnais, foulard) est recommandée, pas obligatoire.</li>
+</ul>
+
+<blockquote>
+<p><strong>Vide juridique</strong> : Aucun organisme de formation n'est officiellement reconnu au Québec. Vous ne pouvez pas être obligé·e de fournir un document qui n'existe pas officiellement. (MAPAQ, OPHQ 2024, CDPDJ)</p>
+</blockquote>
+
+<a href="#" class="back-top">↑ Retour au début</a>
+</section>
+
+<hr>
+
+<section id="part2" class="part">
+<h2><span class="part-num">2</span> Cadre juridique — La Charte des droits et libertés</h2>
+
+<p>Le Québec n'a <strong>pas de loi spécifique</strong> sur les animaux d'assistance (contrairement à l'Ontario, l'Alberta ou la C.-B.). La protection repose sur la <em>Charte des droits et libertés de la personne du Québec</em> (RLRQ c. C-12) :</p>
+
+<ul>
+<li><strong>Article 10</strong> : Interdit la discrimination fondée sur le handicap, incluant « tout moyen pour pallier ce handicap ». Un chien d'assistance est un moyen de pallier un handicap.</li>
+<li><strong>Article 12</strong> : Interdit la discrimination dans l'accès aux lieux publics, biens et services.</li>
+</ul>
+
+<p>La jurisprudence est constante depuis 2001 : l'accès doit être accordé. Refus dans un restaurant (Tessa c. Thi Van, 2001 CanLII 20309), un taxi (Le May c. Coopérative de taxis, 2008 QCTDP 10), un hôtel (Boulanger c. Hôtel Georges, 2025 QCCQ 936).</p>
+
+<p>Sources : <a href="https://www.legisquebec.gouv.qc.ca/fr/document/lc/C-12" target="_blank" rel="noopener">LégisQuébec (C-12)</a> · <a href="https://www.cdpdj.qc.ca/fr" target="_blank" rel="noopener">CDPDJ</a> · <a href="https://www.ophq.gouv.qc.ca/" target="_blank" rel="noopener">OPHQ</a></p>
+
+<a href="#" class="back-top">↑ Retour au début</a>
+</section>
+
+<hr>
+
+<section id="part3" class="part">
+<h2><span class="part-num">3</span> Définitions clés</h2>
+
+<h3>Qui est protégé</h3>
+<p>Toute personne ayant un handicap qui utilise un chien pour l'assister dans ses tâches quotidiennes liées à ce handicap. La Charte ne définit pas le « chien d'assistance » : elle interdit la discrimination fondée sur le handicap, incluant « tout moyen pour pallier ce handicap » (art. 10). Aucun registre, certification ou standard d'entraînement officiel n'existe au Québec (Bolduc c. Restaurant 59 Bangkok, 2005).</p>
+
+<h3>Identification — Obligatoire ou pas ?</h3>
+<p><strong>Non.</strong> Le harnais ou foulard est recommandé pour éviter les contestations, mais ne pas en porter ne justifie pas un refus d'accès.</p>
+
+<a href="#" class="back-top">↑ Retour au début</a>
+</section>
+
+<hr>
+
+<section id="part4" class="part">
+<h2><span class="part-num">4</span> Recours — Comment porter plainte</h2>
+
+<p>Vous pouvez déposer une plainte <strong>gratuite</strong> à la CDPDJ pour discrimination fondée sur le handicap. Délai : <strong>2 ans</strong> après le dernier acte discriminatoire.</p>
+
+<ol>
+<li><strong>Contactez la CDPDJ</strong> : <a href="https://www.cdpdj.qc.ca/fr/portee-plainte" target="_blank" rel="noopener">cdpdj.qc.ca</a> ou 1-800-361-6477</li>
+<li><strong>Préparez votre dossier</strong> : date, heure, lieu, noms, témoins, description</li>
+<li><strong>Démarche informelle d'abord</strong> : Un courriel au commerce expliquant la situation et citant l'article 10 peut suffire à régler le problème sans procédure formelle.</li>
+<li><strong>Suivez le processus</strong> : La CDPDJ enquête, tente une conciliation, et peut saisir le Tribunal des droits de la personne si nécessaire.</li>
+</ol>
+
+<p>Vous pouvez obtenir des dommages-intérêts, des dommages punitifs, une ordonnance de cesser la discrimination, ou des mesures correctives.</p>
+
+<p><a href="https://www.cdpdj.qc.ca/fr/portee-plainte" target="_blank" rel="noopener" class="btn">Déposer une plainte →</a></p>
+
+<a href="#" class="back-top">↑ Retour au début</a>
+</section>
+
+<hr>
+
+<section id="part5" class="part">
+<h2><span class="part-num">5</span> Exceptions et responsabilités du maître-chien</h2>
+
+<ul>
+<li>Garder votre chien sous contrôle en tout temps (laisse, harnais ou commande vocale)</li>
+<li>Assurer la propreté de votre chien dans les lieux publics</li>
+<li>Vous êtes responsable des dommages que votre chien pourrait causer</li>
+<li>Si votre chien est incontrôlable, vous pouvez être invité·e à quitter les lieux</li>
+</ul>
+
+<h3>Exceptions possibles</h3>
+<ul>
+<li><strong>Zones stériles</strong> : Blocs opératoires, unités de brûlés — accès restreint pour raisons sanitaires</li>
+<li><strong>Menace directe</strong> : Comportement dangereux réel et démontré, pas une crainte hypothétique</li>
+<li><strong>Zones à accès restreint</strong> : Certaines zones inaccessibles, mais l'espace public principal demeure accessible</li>
+</ul>
+
+<p>Malgré l'absence de loi spécifique, la Charte vous protège. Un refus d'accès fondé sur votre chien d'assistance est une discrimination interdite. La jurisprudence est constante depuis 2001 : l'accès doit être accordé.</p>
+
+<a href="#" class="back-top">↑ Retour au début</a>
+</section>
+
+</main>
+</div>
+<footer>
+<p>Basé sur la Charte des droits et libertés de la personne (C-12) et les travaux de l'OPHQ (2024). Ceci n'est pas un avis juridique.</p>
+<p><a href="/feedback.html" style="color:var(--blue);text-decoration:none;font-size:0.78rem">Feedback</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dog Access Guide — New Brunswick</title><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128.png">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#16213e;--light:#f5f6fa;--blue:#2563eb;--white:#fff;--text:#1a1a2e;--border:#e0e7ff;--gray:#64748b;--radius:10px;--shadow:0 1px 4px rgba(0,0,0,.08)}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,sans-serif;color:var(--text);background:var(--light);line-height:1.6}
+header{background:var(--navy);color:var(--white);padding:0.6rem 1rem;min-height:64px;display:flex;align-items:center}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0.75rem;flex-wrap:wrap}
+.header-logo{height:48px;width:auto;flex-shrink:0}
+.header-text{text-align:center}
+header h1{font-size:1.2rem;margin:0;line-height:1.3}
+header p{font-size:0.78rem;opacity:0.8;margin-top:0.05rem}
+.province-selector{display:flex;align-items:center;gap:0.35rem}
+.province-selector label{font-size:0.78rem;opacity:0.9;white-space:nowrap}
+.province-selector select{padding:0.3rem 0.4rem;border-radius:5px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.12);color:var(--white);font-size:0.82rem;cursor:pointer;max-width:160px}
+.province-selector select option{background:var(--navy);color:var(--white)}
+.lang-toggle{font-size:0.8rem;display:flex;gap:0.25rem;align-items:center}
+.lang-btn{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:var(--white);padding:0.2rem 0.5rem;border-radius:4px;cursor:pointer;font-size:0.78rem;transition:all 0.15s}
+.lang-btn.active{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.5);font-weight:600}
+.hamburger{display:none;background:none;border:none;color:var(--white);font-size:1.6rem;cursor:pointer;padding:0.2rem;line-height:1;margin-left:auto}
+.page-layout{display:flex;gap:1.5rem;max-width:1200px;margin:1rem auto;padding:0 1rem}
+.page-layout nav.sidebar{width:220px;flex-shrink:0;position:sticky;top:0.5rem;align-self:flex-start;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:0.5rem 0;max-height:calc(100vh - 1rem);overflow-y:auto}
+nav.sidebar a{display:block;padding:0.4rem 0.75rem;color:var(--navy);text-decoration:none;font-size:0.82rem;border-left:3px solid transparent;transition:background 0.15s,border-color 0.15s}
+nav.sidebar a:hover,nav.sidebar a.active{background:var(--border);border-left-color:var(--blue);font-weight:600}
+nav.sidebar .part-label{font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--gray);padding:0.5rem 0.75rem 0.15rem;border-left-color:transparent}
+nav.sidebar .part-label:hover{background:transparent;border-left-color:transparent}
+.lang-fr{display:none!important}
+body.fr .lang-en{display:none!important}
+body.fr .lang-fr{display:block!important}
+main{flex:1;min-width:0;background:var(--white);padding:1.5rem 2rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+main h1{font-size:1.6rem;margin-bottom:0.75rem;color:var(--navy);border-bottom:2px solid var(--border);padding-bottom:0.4rem}
+main h2{font-size:1.2rem;margin:1.25rem 0 0.5rem;color:#1e3a5f}
+main h3{font-size:1.05rem;margin:1rem 0 0.4rem;color:#2d4a74}
+main p{margin-bottom:0.75rem}
+main a{color:var(--blue);text-decoration:underline}
+main ul,main ol{margin:0.4rem 0 0.75rem 1.5rem}
+main li{margin-bottom:0.2rem}
+main hr{margin:1.2rem 0;border:none;border-top:1px solid var(--border)}
+main blockquote{background:#f0f4ff;border-left:4px solid var(--blue);padding:0.6rem 1rem;margin:0.75rem 0;border-radius:0 6px 6px 0}
+main .btn{display:inline-block;background:var(--blue);color:var(--white)!important;text-decoration:none!important;padding:0.5rem 1.1rem;border-radius:6px;font-weight:600;font-size:0.88rem;transition:background 0.2s}
+main .btn:hover{background:#1d4ed8}
+.part-nav{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;padding:0.75rem;background:var(--light);border-radius:8px}
+.part-nav a{display:inline-block;padding:0.35rem 0.65rem;color:var(--navy);text-decoration:none;border-radius:5px;font-size:0.82rem;background:var(--white);border:1px solid var(--border);transition:all 0.15s}
+.part-nav a:hover{background:var(--blue);color:var(--white);border-color:var(--blue)}
+.part{scroll-margin-top:1rem;padding-top:0.5rem}
+.part h2{display:flex;align-items:center;gap:0.5rem;border-bottom:2px solid var(--border);padding-bottom:0.35rem}
+.part h2.lang-fr{display:none}
+body.fr .part h2.lang-en{display:none}
+body.fr .part h2.lang-fr{display:flex}
+
+/* Nav language toggle */
+nav.sidebar a.lang-fr{display:none}
+body.fr nav.sidebar a.lang-en{display:none}
+body.fr nav.sidebar a.lang-fr{display:block}
+
+.part-nav a.lang-fr{display:none}
+body.fr .part-nav a.lang-en{display:none}
+body.fr .part-nav a.lang-fr{display:inline-block}
+.part h2.lang-fr{display:none}
+body.fr .part h2.lang-en{display:none}
+body.fr .part h2.lang-fr{display:flex}
+
+/* Nav language toggle */
+nav.sidebar a.lang-fr{display:none}
+body.fr nav.sidebar a.lang-en{display:none}
+body.fr nav.sidebar a.lang-fr{display:block}
+
+.part-nav a.lang-fr{display:none}
+body.fr .part-nav a.lang-en{display:none}
+body.fr .part-nav a.lang-fr{display:inline-block}
+.part h2 .part-num{background:var(--navy);color:var(--white);font-size:0.75rem;border-radius:50%;width:1.6em;height:1.6em;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+footer{text-align:center;padding:1.25rem;color:var(--gray);font-size:0.78rem;margin-top:1rem;border-top:1px solid var(--border);background:var(--white)}
+.back-top{display:block;text-align:right;font-size:0.8rem;margin-top:0.5rem}
+@media(max-width:768px){
+  header{padding:0.5rem 0.6rem}
+  .header-inner{gap:0.4rem}
+  .header-logo{height:38px}
+  .header-text{min-width:140px}
+  header h1{font-size:1rem}
+  header p{font-size:0.72rem}
+  .province-selector{order:3;width:100%}
+  .province-selector select{width:100%;max-width:none}
+  .hamburger{display:block;order:2}
+  .page-layout{flex-direction:column;padding:0 0.5rem;margin:0.5rem auto}
+  .page-layout nav.sidebar{width:100%;display:none;position:static;max-height:none;margin-bottom:0;border-radius:var(--radius)}
+  .page-layout nav.sidebar.open{display:block}
+  main{padding:1rem;border-radius:8px}
+  main h1{font-size:1.3rem}
+  .part-nav{gap:0.25rem;padding:0.5rem}
+  .part-nav a{font-size:0.78rem;padding:0.3rem 0.5rem}
+}
+@media(min-width:769px){
+  .page-layout nav.sidebar{display:block!important}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<a href="/"><img src="/logo-balance.png" alt="Balance - Service Animal Access Guide" class="header-logo"></a>
+<div class="header-text">
+<h1 class="lang-en">Dog Access Guide — New Brunswick</h1>
+<h1 class="lang-fr">Guide d'accès pour chien — Nouveau-Brunswick</h1>
+<p class="lang-en">Rights and obligations for service dogs</p>
+<p class="lang-fr">Droits et obligations des chiens d'assistance</p>
+</div>
+<div class="province-selector">
+<label for="province">Province :</label>
+<select id="province" onchange="window.location.href=this.value">
+<option value="/on/">Ontario</option>
+<option value="/qc/">Québec</option>
+<option value="/bc/">British Columbia</option>
+<option value="/ab/">Alberta</option>
+<option value="/sk/">Saskatchewan</option>
+<option value="/mb/">Manitoba</option>
+<option value="/ns/">Nova Scotia</option>
+<option value="/nb/" selected>New Brunswick</option>
+<option value="/pe/">Prince Edward Island</option>
+<option value="/nl/">Newfoundland &amp; Labrador</option>
+<option value="/yt/">Yukon</option>
+<option value="/nt/">Northwest Territories</option>
+<option value="/nu/">Nunavut</option>
+</select>
+</div>
+<div class="lang-toggle">
+<button class="lang-btn active" onclick="document.body.className='';this.classList.add('active');this.nextElementSibling.classList.remove('active')">EN</button>
+<button class="lang-btn" onclick="document.body.className='fr';this.classList.add('active');this.previousElementSibling.classList.remove('active')">FR</button>
+</div>
+<button class="hamburger" onclick="document.querySelector('.page-layout nav.sidebar').classList.toggle('open');this.classList.toggle('open')" aria-label="Menu">☰</button>
+</div>
+</header>
+<div class="page-layout">
+<nav class="sidebar">
+<a class="part-label lang-en" href="#part1">Part 1 — Ground Response</a>
+<a class="part-label lang-fr" href="#part1">Partie 1 — Réponse terrain</a>
+<a class="lang-en" href="#part1">What to Do When Denied</a>
+<a class="lang-fr" href="#part1">Que faire en cas de refus</a>
+<a class="part-label lang-en" href="#part2">Part 2 — Legal Framework</a>
+<a class="part-label lang-fr" href="#part2">Partie 2 — Cadre légal</a>
+<a class="lang-en" href="#part2">Human Rights Act &amp; Guideline</a>
+<a class="lang-fr" href="#part2">Loi sur les droits de la personne</a>
+<a class="part-label lang-en" href="#part3">Part 3 — Key Definitions</a>
+<a class="part-label lang-fr" href="#part3">Partie 3 — Définitions clés</a>
+<a class="lang-en" href="#part3">Who is protected, what qualifies</a>
+<a class="lang-fr" href="#part3">Qui est protégé</a>
+<a class="part-label lang-en" href="#part4">Part 4 — Recourse</a>
+<a class="part-label lang-fr" href="#part4">Partie 4 — Recours</a>
+<a class="lang-en" href="#part4">How to file a complaint</a>
+<a class="lang-fr" href="#part4">Comment porter plainte</a>
+<a class="part-label lang-en" href="#part5">Part 5 — Exceptions</a>
+<a class="part-label lang-fr" href="#part5">Partie 5 — Exceptions</a>
+<a class="lang-en" href="#part5-handler">Handler's Responsibility</a>
+<a class="lang-fr" href="#part5-handler">Responsabilités du maître-chien</a>
+</nav>
+<main>
+<div class="part-nav">
+<a class="lang-en" href="#part1">1. Ground Response</a><a class="lang-fr" href="#part1">1. Réponse terrain</a>
+<a class="lang-en" href="#part2">2. Legal Framework</a><a class="lang-fr" href="#part2">2. Cadre légal</a>
+<a class="lang-en" href="#part3">3. Definitions</a><a class="lang-fr" href="#part3">3. Définitions</a>
+<a class="lang-en" href="#part4">4. Recourse</a><a class="lang-fr" href="#part4">4. Recours</a>
+<a class="lang-en" href="#part5">5. Exceptions</a><a class="lang-fr" href="#part5">5. Exceptions</a>
+</div>
+
+<section id="part1" class="part">
+<h2 class="lang-en"><span class="part-num">1</span> Ground Response — What to Do When Denied</h2>
+<h2 class="lang-fr"><span class="part-num">1</span> Réponse terrain — Que faire en cas de refus</h2>
+
+<p class="lang-en">New Brunswick has no specific service animal law. Protection comes from the <em>Human Rights Act</em> (RSNB 2011, c 171) and the NB Human Rights Commission's guideline. No certification, no registry, no paperwork — self-training counts. It's the Maritimes : be friendly, explain, and you'll likely get in. If refused :</p>
+<p class="lang-fr">Le Nouveau-Brunswick n'a pas de loi spécifique sur les animaux d'assistance. La protection vient de la <em>Loi sur les droits de la personne</em> (LRN-B 2011, c 171) et des lignes directrices de la Commission des droits de la personne. Aucune certification, aucun registre, aucune paperasse — l'auto-entraînement compte. C'est les Maritimes : soyez amical, expliquez, et tout devrait bien aller. En cas de refus :</p>
+
+<ol class="lang-en">
+<li><strong>Stay calm, be friendly</strong> : "This is a service animal trained to assist me. Under the <em>Human Rights Act</em>, you need to accommodate me." A smile and a clear explanation go a long way in NB.</li>
+<li><strong>Answer reasonable questions</strong> : If your animal is not obviously a service animal, staff can ask what it does for you and whether it's trained. You do not need to disclose your diagnosis. (HRC Guideline, 2017)</li>
+<li><strong>Documentation may be requested</strong> : A letter from a doctor or a certificate — but only if the need for the animal is not obvious. No standard ID or certification exists in NB.</li>
+<li><strong>If refused, don't push it</strong> : Escalating rarely helps in small communities. Leave and file a complaint with the NB Human Rights Commission.</li>
+</ol>
+<ol class="lang-fr">
+<li><strong>Restez calme, soyez amical</strong> : « C'est un animal d'assistance entraîné pour m'aider. En vertu de la <em>Loi sur les droits de la personne</em>, vous devez m'accommoder. » Un sourire et une explication claire font beaucoup au NB.</li>
+<li><strong>Répondez aux questions raisonnables</strong> : Si votre animal n'est pas clairement identifiable, le personnel peut demander ce qu'il fait pour vous et s'il est entraîné. Vous n'avez pas à divulguer votre diagnostic. (Lignes directrices CDP, 2017)</li>
+<li><strong>Des documents peuvent être demandés</strong> : Une lettre d'un médecin ou un certificat — mais seulement si le besoin n'est pas évident. Aucune carte d'identité ou certification standardisée n'existe au NB.</li>
+<li><strong>Si refusé, n'insistez pas</strong> : L'escalade aide rarement dans les petites communautés. Partez et déposez une plainte à la Commission des droits de la personne.</li>
+</ol>
+
+<h3 class="lang-en">What staff can ask</h3>
+<h3 class="lang-fr">Ce que le personnel peut demander</h3>
+<ul class="lang-en">
+<li><strong>If it's not obvious</strong> : "Is this a service animal?" and "What function does it perform?"</li>
+<li><strong>Documentation</strong> : May ask for a doctor's note or certificate if the animal's role isn't clear. Never : "What's your disability?" or "Demonstrate the task"</li>
+<li><strong>Never allowed</strong> : Asking about your diagnosis, requiring proof of vaccination or licensing, demanding specialized certification</li>
+</ul>
+<ul class="lang-fr">
+<li><strong>Si ce n'est pas évident</strong> : « Est-ce un animal d'assistance? » et « Quelle fonction remplit-il? »</li>
+<li><strong>Documents</strong> : Peuvent demander une note du médecin ou un certificat si le rôle de l'animal n'est pas clair. Jamais : « Quel est votre handicap? » ou « Démontrez la tâche »</li>
+<li><strong>Jamais permis</strong> : Demander votre diagnostic, exiger une preuve de vaccination ou de permis, exiger une certification spécialisée</li>
+</ul>
+
+<h3 class="lang-en">No-pet policies don't apply</h3>
+<h3 class="lang-fr">Les politiques « aucun animal » ne s'appliquent pas</h3>
+<ul class="lang-en">
+<li>No-pet clauses are unenforceable against service animals</li>
+<li>Landlords cannot charge pet fees or deposits for service animals</li>
+<li>Service animals must be under control at all times</li>
+</ul>
+<ul class="lang-fr">
+<li>Les clauses « aucun animal » sont inopposables aux animaux d'assistance</li>
+<li>Les locateurs ne peuvent exiger de frais ou dépôt pour animaux d'assistance</li>
+<li>Les animaux d'assistance doivent être sous contrôle en tout temps</li>
+</ul>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+<hr>
+
+<section id="part2" class="part">
+<h2 class="lang-en"><span class="part-num">2</span> Legal Framework</h2>
+<h2 class="lang-fr"><span class="part-num">2</span> Cadre légal</h2>
+
+<blockquote class="lang-en">
+<p><strong>The NB reality</strong> : No specific law, no certification, no registry. The Human Rights Act and the Commission's detailed guideline are all you have — but they're strong. The guideline is the most comprehensive in Atlantic Canada.</p>
+</blockquote>
+<blockquote class="lang-fr">
+<p><strong>La réalité au NB</strong> : Aucune loi spécifique, aucune certification, aucun registre. La <em>Loi sur les droits de la personne</em> et les lignes directrices de la Commission sont tout ce que vous avez — mais elles sont solides. Les lignes directrices sont les plus complètes au Canada atlantique.</p>
+</blockquote>
+
+<ul class="lang-en">
+<li><strong>Human Rights Act</strong> (RSNB 2011, c 171) — Prohibits discrimination based on disability. No explicit "service animal" definition in the Act itself, but the HR Commission's guideline interprets disability as including reliance on a service animal. Covers services, accommodation, employment, and housing.</li>
+<li><strong>HRC Guideline on Accommodating People with Service Animals</strong> (2017) — Defines a service animal as "an animal that has been trained to perform specific tasks to provide assistance to a person with a disability." Self-training counts. No certification or professional training required. Provides detailed rules for what staff can ask, when documentation is reasonable, and how to accommodate.</li>
+</ul>
+<ul class="lang-fr">
+<li><strong>Loi sur les droits de la personne</strong> (LRN-B 2011, c 171) — Interdit la discrimination fondée sur le handicap. Aucune définition explicite d'« animal d'assistance » dans la Loi elle-même, mais les lignes directrices de la Commission interprètent le handicap comme incluant le recours à un animal d'assistance. Couvre les services, le logement, l'emploi.</li>
+<li><strong>Lignes directrices sur l'accommodement des personnes accompagnées d'un animal d'assistance</strong> (2017) — Définissent un animal d'assistance comme « un animal entraîné à effectuer des tâches spécifiques pour aider une personne handicapée. » L'auto-entraînement compte. Aucune certification ou formation professionnelle requise.</li>
+</ul>
+
+<h3 class="lang-en">Key principles from the guideline</h3>
+<h3 class="lang-fr">Principes clés des lignes directrices</h3>
+<ul class="lang-en">
+<li>Identification (vest/harness) is recommended but not required</li>
+<li>Reasonable inquiries allowed about the animal's function, not the diagnosis</li>
+<li>Duty to accommodate to the point of undue hardship</li>
+<li>A person with a service animal must maintain control at all times</li>
+<li>Staff may ask a handler to leave if the animal poses a risk or is misbehaving</li>
+</ul>
+<ul class="lang-fr">
+<li>L'identification (harnais/veste) est recommandée mais pas obligatoire</li>
+<li>Questions raisonnables permises sur la fonction de l'animal, pas sur le diagnostic</li>
+<li>Obligation d'accommoder jusqu'au point de contrainte excessive</li>
+<li>La personne doit garder le contrôle de son animal en tout temps</li>
+<li>Le personnel peut demander de partir si l'animal pose un risque ou a un mauvais comportement</li>
+</ul>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+<hr>
+
+<section id="part3" class="part">
+<h2 class="lang-en"><span class="part-num">3</span> Key Definitions</h2>
+<h2 class="lang-fr"><span class="part-num">3</span> Définitions clés</h2>
+
+<h3 class="lang-en">What qualifies</h3>
+<h3 class="lang-fr">Ce qui est couvert</h3>
+<ul class="lang-en">
+<li><strong>Definition</strong> (HRC Guideline) : "An animal that has been trained to perform specific tasks in order to provide assistance to a person with a disability for that disability."</li>
+<li><strong>Self-training counts</strong> : No professional training or certification required.</li>
+<li><strong>No vest, harness, or ID required</strong> — but wearing one makes accommodation smoother (HRC Guideline).</li>
+<li><strong>Dogs are most common</strong>, but other animals may qualify.</li>
+</ul>
+<ul class="lang-fr">
+<li><strong>Définition</strong> (Lignes directrices CDP) : « Un animal entraîné à effectuer des tâches spécifiques pour fournir une assistance à une personne handicapée en raison de ce handicap. »</li>
+<li><strong>L'auto-entraînement compte</strong> : Aucune formation professionnelle ou certification requise.</li>
+<li><strong>Aucun harnais, veste ou carte d'identité requis</strong> — mais en porter un facilite l'accommodement.</li>
+<li><strong>Les chiens sont les plus communs</strong>, mais d'autres animaux peuvent être couverts.</li>
+</ul>
+
+<h3 class="lang-en">Who is protected</h3>
+<h3 class="lang-fr">Qui est protégé</h3>
+<ul class="lang-en">
+<li>Any person with a disability relying on a trained service animal — physical, sensory, mental health, neurological, intellectual.</li>
+<li>No certification, no registry. The guideline applies equally to all.</li>
+</ul>
+<ul class="lang-fr">
+<li>Toute personne handicapée qui utilise un animal d'assistance entraîné — handicap physique, sensoriel, santé mentale, neurologique, intellectuel.</li>
+<li>Aucune certification, aucun registre. Les lignes directrices s'appliquent à tous également.</li>
+</ul>
+
+<h3 class="lang-en">What does NOT qualify</h3>
+<h3 class="lang-fr">Ce qui n'est PAS couvert</h3>
+<ul class="lang-en">
+<li><strong>ESAs</strong> : The definition requires training for specific tasks. Comfort-by-presence alone does not qualify.</li>
+<li><strong>Pets</strong> : Not protected.</li>
+</ul>
+<ul class="lang-fr">
+<li><strong>Animaux de soutien émotionnel</strong> : La définition exige un entraînement pour des tâches spécifiques. La présence réconfortante seule ne suffit pas.</li>
+<li><strong>Animaux de compagnie</strong> : Non protégés.</li>
+</ul>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+<hr>
+
+<section id="part4" class="part">
+<h2 class="lang-en"><span class="part-num">4</span> Recourse — How to file a complaint</h2>
+<h2 class="lang-fr"><span class="part-num">4</span> Recours — Comment porter plainte</h2>
+
+<h3 class="lang-en">Under the Human Rights Act</h3>
+<h3 class="lang-fr">En vertu de la Loi sur les droits de la personne</h3>
+<ul class="lang-en">
+<li><strong>New Brunswick Human Rights Commission</strong> — no fee, no lawyer required</li>
+<li>Contact : <a href="https://www.nbhumanrights.ca/" target="_blank" rel="noopener">nbhumanrights.ca</a> | 506-453-2301 | toll-free 1-888-471-2236</li>
+<li>Filing deadline : 12 months from the alleged discrimination</li>
+</ul>
+<ul class="lang-fr">
+<li><strong>Commission des droits de la personne du N.-B.</strong> — gratuit, pas d'avocat requis</li>
+<li>Contact : <a href="https://www.nbhumanrights.ca/fr" target="_blank" rel="noopener">nbhumanrights.ca/fr</a> | 506-453-2301 | sans frais 1-888-471-2236</li>
+<li>Délai : 12 mois à compter de la discrimination alléguée</li>
+</ul>
+
+<h3 class="lang-en">Steps</h3>
+<h3 class="lang-fr">Démarches</h3>
+<ol class="lang-en">
+<li><strong>Document</strong> : date, time, location, business, names, witnesses, photos</li>
+<li><strong>Write the business</strong> explaining the HR Act and duty to accommodate</li>
+<li><strong>File with the NB Human Rights Commission</strong> if unresolved</li>
+</ol>
+<ol class="lang-fr">
+<li><strong>Documentez</strong> : date, heure, lieu, commerce, noms, témoins, photos</li>
+<li><strong>Écrivez au commerce</strong> en expliquant la Loi et l'obligation d'accommodement</li>
+<li><strong>Déposez une plainte à la Commission</strong> si non résolu</li>
+</ol>
+
+<p class="lang-en"><a href="https://www.nbhumanrights.ca/" target="_blank" rel="noopener" class="btn">File a complaint →</a></p>
+<p class="lang-fr"><a href="https://www.nbhumanrights.ca/fr" target="_blank" rel="noopener" class="btn">Déposer une plainte →</a></p>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+<hr>
+
+<section id="part5" class="part">
+<h2 class="lang-en"><span class="part-num">5</span> Exceptions &amp; Handler's Responsibility</h2>
+<h2 class="lang-fr"><span class="part-num">5</span> Exceptions et responsabilités du maître-chien</h2>
+
+<ul class="lang-en">
+<li><strong>Keep your animal under control</strong> at all times — if it's misbehaving or poses a risk, staff can ask you to leave (HRC Guideline)</li>
+<li><strong>Identification helps</strong> : a vest or harness makes things smoother, even though it's not required</li>
+<li><strong>Be ready to explain what your animal does</strong> — reasonable inquiries are allowed, especially if the role isn't obvious</li>
+<li><strong>Clean up after your animal</strong> in public spaces</li>
+<li><strong>You are responsible for any damages</strong> your animal causes</li>
+</ul>
+<ul class="lang-fr">
+<li><strong>Gardez le contrôle de votre animal</strong> en tout temps — s'il a un mauvais comportement ou pose un risque, le personnel peut demander de partir (Lignes directrices CDP)</li>
+<li><strong>L'identification aide</strong> : une veste ou un harnais facilite les choses, même si ce n'est pas obligatoire</li>
+<li><strong>Soyez prêt à expliquer ce que fait votre animal</strong> — des questions raisonnables sont permises, surtout si le rôle n'est pas évident</li>
+<li><strong>Nettoyez après votre animal</strong> dans les espaces publics</li>
+<li><strong>Vous êtes responsable des dommages</strong> causés par votre animal</li>
+</ul>
+
+<h3 class="lang-en">Possible exceptions</h3>
+<h3 class="lang-fr">Exceptions possibles</h3>
+<ul class="lang-en">
+<li><strong>Sterile/restricted areas</strong> : operating rooms, burn units, food prep areas</li>
+<li><strong>Direct threat</strong> : demonstrated dangerous behaviour, not fear or allergies of others (duty to accommodate allergies by separating, not excluding)</li>
+<li><strong>Undue hardship</strong> : in housing, employment, and services, accommodation applies up to undue hardship</li>
+</ul>
+<ul class="lang-fr">
+<li><strong>Zones stériles/restreintes</strong> : salles d'opération, unités de brûlés, aires de préparation alimentaire</li>
+<li><strong>Menace directe</strong> : comportement dangereux démontré, pas la peur ou les allergies d'autrui (obligation d'accommoder les allergies par la séparation, pas l'exclusion)</li>
+<li><strong>Contrainte excessive</strong> : dans le logement, l'emploi et les services, l'accommodement s'applique jusqu'à la contrainte excessive</li>
+</ul>
+
+<p class="lang-en"><strong>Key takeaway</strong> : No paperwork, no certification, no fuss. If your animal is trained to help you, you have rights. Be friendly, explain what your animal does, and keep it under control. The Human Rights Commission has your back.</p>
+<p class="lang-fr"><strong>À retenir</strong> : Aucune paperasse, aucune certification, pas de complications. Si votre animal est entraîné à vous aider, vous avez des droits. Soyez amical, expliquez ce que fait votre animal et gardez-le sous contrôle. La Commission des droits de la personne est derrière vous.</p>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+</main>
+</div>
+<footer>
+<p class="lang-en">Based on the <em>Human Rights Act</em> (RSNB 2011, c 171) and the NB Human Rights Commission Guideline on Accommodating People with Service Animals (2017). This is not legal advice.</p>
+<p class="lang-fr">Basé sur la <em>Loi sur les droits de la personne</em> (LRN-B 2011, c 171) et les Lignes directrices sur l'accommodement des personnes accompagnées d'un animal d'assistance (2017). Pas un avis juridique.</p>
+<p><a href="/feedback.html" style="color:var(--blue);text-decoration:none;font-size:0.78rem">Feedback</a></p>
+</footer>
+</body>
+</html>

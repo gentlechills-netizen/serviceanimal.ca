@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>404 — Page Not Found · Service Animal Access Guide</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128.png">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#16213e;--light:#f5f6fa;--blue:#2563eb;--white:#fff;--text:#1a1a2e;--border:#e0e7ff;--gray:#64748b;--radius:10px;--shadow:0 1px 4px rgba(0,0,0,.08)}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,sans-serif;color:var(--text);background:var(--light);line-height:1.5;min-height:100vh;display:flex;flex-direction:column}
+
+/* HEADER */
+header{background:var(--navy);color:var(--white);padding:0.7rem 1rem;display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:0.6rem;width:100%}
+header img{height:42px;width:auto}
+header h1{font-size:1.1rem;margin:0}
+.lang-toggle{font-size:0.8rem;margin-left:auto;display:flex;gap:0.25rem;align-items:center}
+.lang-btn{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:var(--white);padding:0.2rem 0.5rem;border-radius:4px;cursor:pointer;font-size:0.78rem;transition:all 0.15s}
+.lang-btn.active{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.5);font-weight:600}
+.lang-btn:hover{background:rgba(255,255,255,0.2)}
+
+/* 404 HERO */
+.hero-404{background:var(--navy);color:var(--white);padding:2.5rem 1rem 2rem;text-align:center}
+.hero-404-inner{max-width:800px;margin:0 auto}
+.hero-404 h2{font-size:3rem;font-weight:800;margin-bottom:0.25rem;opacity:0.3;line-height:1}
+.hero-404 .msg{font-size:1.2rem;font-weight:600;margin-bottom:0.5rem}
+.hero-404 .sub{font-size:0.95rem;opacity:0.7;max-width:500px;margin:0 auto}
+
+/* PROVINCE GRID */
+.province-section{padding:1.5rem 1rem;max-width:900px;margin:0 auto;width:100%}
+.province-section h3{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--gray);margin-bottom:0.75rem;text-align:center}
+.province-grid{display:grid;gap:0.5rem}
+.grid-live{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.province-card{display:flex;align-items:center;gap:0.5rem;padding:0.6rem 0.75rem;border-radius:8px;text-decoration:none;font-size:0.85rem;transition:all 0.15s}
+.province-card:hover{transform:translateY(-1px)}
+.card-live{background:var(--white);border:1px solid var(--border);color:var(--text);font-weight:600;box-shadow:var(--shadow)}
+.card-live:hover{box-shadow:0 2px 8px rgba(0,0,0,.1);border-color:var(--blue)}
+.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-left:auto;flex-shrink:0}
+.dot-live{background:#22c55e}
+.province-card .name{flex:1}
+.province-card .abbr{font-size:0.7rem;opacity:0.5;text-transform:uppercase}
+
+/* LANGUAGE TOGGLE */
+.lang-en, .lang-fr{transition:opacity 0.15s}
+.lang-fr{display:none}
+body.fr .lang-en{display:none}
+body.fr .lang-fr{display:block}
+
+/* FOOTER */
+footer{text-align:center;padding:1.25rem;color:var(--gray);font-size:0.75rem;margin-top:auto;border-top:1px solid var(--border);background:var(--white)}
+
+/* RESPONSIVE */
+@media(max-width:480px){
+  header h1{font-size:0.95rem}
+  header img{height:34px}
+  .hero-404{padding:1.5rem 0.75rem 1.25rem}
+  .hero-404 h2{font-size:2rem}
+  .grid-live{grid-template-columns:1fr 1fr}
+  .province-card{padding:0.5rem 0.6rem;font-size:0.8rem}
+}
+@media(min-width:481px) and (max-width:768px){
+  .grid-live{grid-template-columns:1fr 1fr}
+}
+@media(min-width:769px){
+  .grid-live{grid-template-columns:repeat(4,1fr)}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<a href="/"><img src="/logo-balance.png" alt="Balance - Service Animal Access Guide"></a>
+<h1 class="lang-en">Service Animal Access Guide</h1>
+<h1 class="lang-fr">Guide d'accès — Animaux d'assistance</h1>
+<div class="lang-toggle">
+<button class="lang-btn active" onclick="document.body.className='';this.classList.add('active');this.nextElementSibling.classList.remove('active')">EN</button>
+<button class="lang-btn" onclick="document.body.className='fr';this.classList.add('active');this.previousElementSibling.classList.remove('active')">FR</button>
+</div>
+</div>
+</header>
+
+<section class="hero-404">
+<div class="hero-404-inner lang-en">
+<h2>404</h2>
+<p class="msg">Page not found</p>
+<p class="sub">That page doesn't exist. Pick your province below to find your guide.</p>
+</div>
+<div class="hero-404-inner lang-fr">
+<h2>404</h2>
+<p class="msg">Page introuvable</p>
+<p class="sub">Cette page n'existe pas. Choisissez votre province ci-dessous.</p>
+</div>
+</section>
+
+<section class="province-section">
+<div class="province-grid grid-live">
+<a href="/on/" class="province-card card-live"><span class="name">Ontario</span><span class="abbr">ON</span><span class="status-dot dot-live"></span></a>
+<a href="/bc/" class="province-card card-live"><span class="name">British Columbia</span><span class="abbr">BC</span><span class="status-dot dot-live"></span></a>
+<a href="/ab/" class="province-card card-live"><span class="name">Alberta</span><span class="abbr">AB</span><span class="status-dot dot-live"></span></a>
+<a href="/qc/" class="province-card card-live"><span class="name">Québec</span><span class="abbr">QC</span><span class="status-dot dot-live"></span></a>
+<a href="/sk/" class="province-card card-live"><span class="name lang-en">Saskatchewan</span><span class="name lang-fr">Saskatchewan</span><span class="abbr">SK</span><span class="status-dot dot-live"></span></a>
+<a href="/mb/" class="province-card card-live"><span class="name">Manitoba</span><span class="abbr">MB</span><span class="status-dot dot-live"></span></a>
+<a href="/ns/" class="province-card card-live"><span class="name lang-en">Nova Scotia</span><span class="name lang-fr">Nouvelle-Écosse</span><span class="abbr">NS</span><span class="status-dot dot-live"></span></a>
+<a href="/nb/" class="province-card card-live"><span class="name lang-en">New Brunswick</span><span class="name lang-fr">Nouveau-Brunswick</span><span class="abbr">NB</span><span class="status-dot dot-live"></span></a>
+<a href="/pe/" class="province-card card-live"><span class="name lang-en">PEI</span><span class="name lang-fr">Î.-P.-É.</span><span class="abbr">PE</span><span class="status-dot dot-live"></span></a>
+<a href="/nl/" class="province-card card-live"><span class="name lang-en">Newfoundland &amp; Labrador</span><span class="name lang-fr">Terre-Neuve-et-Labrador</span><span class="abbr">NL</span><span class="status-dot dot-live"></span></a>
+<a href="/yt/" class="province-card card-live"><span class="name">Yukon</span><span class="abbr">YT</span><span class="status-dot dot-live"></span></a>
+<a href="/nt/" class="province-card card-live"><span class="name lang-en">Northwest Territories</span><span class="name lang-fr">Territoires du Nord-Ouest</span><span class="abbr">NT</span><span class="status-dot dot-live"></span></a>
+<a href="/nu/" class="province-card card-live"><span class="name">Nunavut</span><span class="abbr">NU</span><span class="status-dot dot-live"></span></a>
+</div>
+</section>
+
+<footer>
+<p class="lang-en">Based on provincial and territorial legislation. Not legal advice. · serviceanimal.ca</p>
+<p class="lang-fr">Basé sur les lois provinciales et territoriales. Pas un avis juridique. · serviceanimal.ca</p>
+</footer>
+</body>
+</html>

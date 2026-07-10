@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ontario Service Animal Access Guide — Service Animal Access Guide</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128.png">
+<style>
+/* === RESET === */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+/* === VARIABLES === */
+:root{--navy:#16213e;--light:#f5f6fa;--blue:#2563eb;--white:#fff;--text:#1a1a2e;--border:#e0e7ff;--gray:#64748b;--radius:10px;--shadow:0 1px 4px rgba(0,0,0,.08)}
+/* === BASE === */
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,sans-serif;color:var(--text);background:var(--light);line-height:1.6}
+/* === HEADER === */
+header{background:var(--navy);color:var(--white);padding:0.6rem 1rem;min-height:64px;display:flex;align-items:center}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap}
+.header-logo{height:48px;width:auto;flex-shrink:0}
+.header-text{flex:1;min-width:180px}
+header h1{font-size:1.2rem;margin:0;line-height:1.3}
+header p{font-size:0.78rem;opacity:0.8;margin-top:0.05rem}
+/* === PROVINCE SELECTOR === */
+.province-selector{display:flex;align-items:center;gap:0.35rem}
+.province-selector label{font-size:0.78rem;opacity:0.9;white-space:nowrap}
+.province-selector select{padding:0.3rem 0.4rem;border-radius:5px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.12);color:var(--white);font-size:0.82rem;cursor:pointer;max-width:160px}
+.province-selector select option{background:var(--navy);color:var(--white)}
+/* === HAMBURGER === */
+.hamburger{display:none;background:none;border:none;color:var(--white);font-size:1.6rem;cursor:pointer;padding:0.2rem;line-height:1;margin-left:auto}
+/* === LAYOUT === */
+.page-layout{display:flex;gap:1.5rem;max-width:1200px;margin:1rem auto;padding:0 1rem}
+/* === SIDEBAR === */
+.page-layout nav.sidebar{width:220px;flex-shrink:0;position:sticky;top:0.5rem;align-self:flex-start;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:0.5rem 0;max-height:calc(100vh - 1rem);overflow-y:auto}
+nav.sidebar a{display:block;padding:0.4rem 0.75rem;color:var(--navy);text-decoration:none;font-size:0.82rem;border-left:3px solid transparent;transition:background 0.15s,border-color 0.15s}
+nav.sidebar a:hover,nav.sidebar a.active{background:var(--border);border-left-color:var(--blue);font-weight:600}
+nav.sidebar .part-label{font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--gray);padding:0.5rem 0.75rem 0.15rem;border-left-color:transparent}
+nav.sidebar .part-label:hover{background:transparent;border-left-color:transparent}
+/* === MAIN === */
+main{flex:1;min-width:0;background:var(--white);padding:1.5rem 2rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+main h1{font-size:1.6rem;margin-bottom:0.75rem;color:var(--navy);border-bottom:2px solid var(--border);padding-bottom:0.4rem}
+main h2{font-size:1.2rem;margin:1.25rem 0 0.5rem;color:#1e3a5f}
+main h3{font-size:1.05rem;margin:1rem 0 0.4rem;color:#2d4a74}
+main p{margin-bottom:0.75rem}
+main a{color:var(--blue);text-decoration:underline}
+main ul,main ol{margin:0.4rem 0 0.75rem 1.5rem}
+main li{margin-bottom:0.2rem}
+main hr{margin:1.2rem 0;border:none;border-top:1px solid var(--border)}
+main blockquote{background:#f0f4ff;border-left:4px solid var(--blue);padding:0.6rem 1rem;margin:0.75rem 0;border-radius:0 6px 6px 0}
+main .btn{display:inline-block;background:var(--blue);color:var(--white)!important;text-decoration:none!important;padding:0.5rem 1.1rem;border-radius:6px;font-weight:600;font-size:0.88rem;transition:background 0.2s}
+main .btn:hover{background:#1d4ed8}
+main .btn-outline{display:inline-block;background:transparent;color:var(--blue)!important;text-decoration:none!important;padding:0.45rem 1rem;border-radius:6px;font-weight:600;font-size:0.88rem;border:2px solid var(--blue);transition:all 0.2s}
+main .btn-outline:hover{background:var(--blue);color:var(--white)!important}
+/* === PART NAV (PILLS) === */
+.part-nav{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;padding:0.75rem;background:var(--light);border-radius:8px}
+.part-nav a{display:inline-block;padding:0.35rem 0.65rem;color:var(--navy);text-decoration:none;border-radius:5px;font-size:0.82rem;background:var(--white);border:1px solid var(--border);transition:all 0.15s}
+.part-nav a:hover{background:var(--blue);color:var(--white);border-color:var(--blue)}
+/* === SECTIONS === */
+.part{scroll-margin-top:1rem;padding-top:0.5rem}
+.part h2{display:flex;align-items:center;gap:0.5rem;border-bottom:2px solid var(--border);padding-bottom:0.35rem}
+.part h2 .part-num{background:var(--navy);color:var(--white);font-size:0.75rem;border-radius:50%;width:1.6em;height:1.6em;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+/* === FOOTER === */
+footer{text-align:center;padding:1.25rem;color:var(--gray);font-size:0.78rem;margin-top:1rem;border-top:1px solid var(--border);background:var(--white)}
+/* === BACK TO TOP === */
+.back-top{display:block;text-align:right;font-size:0.8rem;margin-top:0.5rem}
+/* === RESPONSIVE === */
+@media(max-width:768px){
+  header{padding:0.5rem 0.6rem}
+  .header-inner{gap:0.4rem}
+  .header-logo{height:38px}
+  .header-text{min-width:140px}
+  header h1{font-size:1rem}
+  header p{font-size:0.72rem}
+  .province-selector{order:3;width:100%}
+  .province-selector select{width:100%;max-width:none}
+  .hamburger{display:block;order:2}
+  .page-layout{flex-direction:column;padding:0 0.5rem;margin:0.5rem auto}
+  .page-layout nav.sidebar{width:100%;display:none;position:static;max-height:none;margin-bottom:0;border-radius:var(--radius)}
+  .page-layout nav.sidebar.open{display:block}
+  main{padding:1rem;border-radius:8px}
+  main h1{font-size:1.3rem}
+  .part-nav{gap:0.25rem;padding:0.5rem}
+  .part-nav a{font-size:0.78rem;padding:0.3rem 0.5rem}
+}
+@media(min-width:769px){
+  .page-layout nav.sidebar{display:block!important}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<a href="/"><img src="/logo-balance.png" alt="Balance - Service Animal Access Guide" class="header-logo"></a>
+<div class="header-text">
+<h1><a href="/on/" style="color:white;text-decoration:none">Ontario Service Animal Access Guide</a></h1>
+<p>Legal rights and obligations for service animals in Ontario</p>
+</div>
+<div class="province-selector">
+<label for="province">Province:</label>
+<select id="province" onchange="window.location.href=this.value">
+<option value="/on/">Ontario</option>
+<option value="/qc/">Québec</option>
+<option value="/bc/">British Columbia</option>
+<option value="/ab/">Alberta</option>
+<option value="/sk/">Saskatchewan</option>
+<option value="/mb/">Manitoba</option>
+<option value="/ns/">Nova Scotia</option>
+<option value="/nb/">New Brunswick</option>
+<option value="/pe/">Prince Edward Island</option>
+<option value="/nl/">Newfoundland &amp; Labrador</option>
+<option value="/yt/">Yukon</option>
+<option value="/nt/">Northwest Territories</option>
+<option value="/nu/">Nunavut</option>
+</select>
+</div>
+<button class="hamburger" onclick="document.querySelector('.page-layout nav.sidebar').classList.toggle('open');this.classList.toggle('open')" aria-label="Toggle menu">☰</button>
+</div>
+</header>
+<div class="page-layout">
+<nav class="sidebar">
+<a class="part-label" href="#part1">Part 1 — On the Ground</a>
+<a href="#part1">What to Do When Denied</a>
+<a class="part-label" href="#part2">Part 2 — Legal Basis</a>
+<a href="#part2">The Law Explained</a>
+<a class="part-label" href="#part3">Part 3 — Key Definitions</a>
+<a href="#part3">Who Is Protected</a>
+<a class="part-label" href="#part4">Part 4 — Recourse</a>
+<a href="#part4">How to File a Complaint</a>
+<a class="part-label" href="#part5">Part 5 — Exceptions</a>
+<a href="#part5-handler">Handler&#39;s Responsibility</a>
+<a href="/on/" class=" ">← Back to Ontario Guide</a>
+</nav>
+<main>
+<h1>Service Animal Letter — Templates</h1>
+<p>Use these templates to obtain a medical letter from your regulated health professional. This is the only documentation you need under Ontario law for service animal access.</p>
+
+<h2>Email Request to Your Health Professional</h2>
+<p><em>Use this text as an email to your regulated health professional to request a service animal letter.</em></p>
+<hr>
+<p><strong>Subject:</strong> Request for AODA-Compliant Service Animal Medical Letter</p>
+<p>Dear [ <strong>Dr. / Health Professional&#39;s Last Name</strong> ],</p>
+<p>I am writing to request a medical letter to confirm my requirement for a Service Animal, in accordance with the <em>Accessibility for Ontarians with Disabilities Act</em> (AODA).</p>
+<p>Under Ontario law, the only valid legal documentation required for public access is a letter from a regulated health professional stating that the animal is required for reasons relating to a disability <strong>(O. Reg. 165/16, s. 80.45)</strong>.</p>
+<p>Could you please provide a brief letter on your official clinic letterhead? I have attached a standard template below for your convenience. The letter does not need to disclose my specific diagnosis or the specific tasks the animal performs, preserving my medical privacy.</p>
+<p>Thank you for your continued support.</p>
+<p>[ <strong>Your Full Name</strong> ]<br>
+[ <strong>Your Phone Number</strong> ]<br>
+[ <strong>Your Date of Birth</strong> ]</p>
+
+<h2>Medical Letter Template (for your health professional)</h2>
+<p><em>Give this to your health professional. It contains the exact legal phrasing required by the AODA.</em></p>
+<hr>
+<p><strong>[ CLINIC / PROFESSIONAL LETTERHEAD ]</strong></p>
+<p><strong>Date:</strong> [ <strong>MM/DD/YYYY</strong> ]</p>
+<p><strong>To Whom It May Concern:</strong></p>
+<p><strong>Re: Medical Documentation for Service Animal Access</strong><br>
+<strong>Patient Name:</strong> [ <strong>Patient&#39;s Full Name</strong> ]</p>
+<p>Please accept this letter as formal medical documentation under the <em>Accessibility for Ontarians with Disabilities Act</em> (AODA), specifically <strong>O. Reg. 165/16, Section 80.45 (4)b</strong>.</p>
+<p>I am a regulated health professional treating the above-named patient. I can confirm that [ <strong>Patient&#39;s Full Name</strong> ] is a person with a disability, and that they require their animal for reasons relating to their disability.</p>
+<p>Under the AODA and the Ontario Human Rights Code, this letter serves as the complete and sole proof required for the patient and their Service Animal to access goods, services, and facilities open to the public.</p>
+<p>Should you require verification of my status as a regulated health professional, please contact my office at the number provided below. Due to patient confidentiality, no details regarding the nature of the disability will be disclosed.</p>
+<p>Sincerely,</p>
+<p><strong>[ Professional&#39;s Signature ]</strong></p>
+<p>[ <strong>Professional&#39;s Printed Name</strong> ]<br>
+[ <strong>Professional&#39;s Title / Credentials</strong> ]<br>
+[ <strong>College Registration Number</strong> ]<br>
+[ <strong>Clinic Name &amp; Contact Information</strong> ]</p>
+<p style="margin-top:1.5rem"><a href="/on/" class="btn-outline">← Back to Ontario Guide</a></p>
+</main></main>
+</div>
+<footer>
+<p>Based on provincial and territorial human rights legislation. This is not legal advice.</p>
+</footer>
+</body>
+</html>
