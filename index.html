@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Service Animal Access Guide — Canada</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128.png">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#16213e;--light:#f5f6fa;--blue:#2563eb;--white:#fff;--text:#1a1a2e;--border:#e0e7ff;--gray:#64748b;--radius:10px;--shadow:0 1px 4px rgba(0,0,0,.08)}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,sans-serif;color:var(--text);background:var(--light);line-height:1.5;min-height:100vh;display:flex;flex-direction:column}
+
+/* HEADER */
+header{background:var(--navy);color:var(--white);padding:0.7rem 1rem;display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:0.6rem;width:100%}
+header img{height:42px;width:auto}
+header h1{font-size:1.1rem;margin:0}
+.lang-toggle{font-size:0.8rem;margin-left:auto;display:flex;gap:0.25rem;align-items:center}
+.lang-btn{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:var(--white);padding:0.2rem 0.5rem;border-radius:4px;cursor:pointer;font-size:0.78rem;transition:all 0.15s}
+.lang-btn.active{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.5);font-weight:600}
+.lang-btn:hover{background:rgba(255,255,255,0.2)}
+
+/* HERO */
+.hero{background:#16213e;color:white;padding:2.5rem 1rem 2rem;text-align:center}
+.hero-inner{max-width:800px;margin:0 auto}
+.hero h2{font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;line-height:1.5}
+.hero h2 .line2{display:block;font-size:2rem;margin-top:0.15rem}
+.hero .sub{font-size:1rem;opacity:0.85;max-width:600px;margin:0.75rem auto 0.25rem}
+.hero .tagline{font-size:0.85rem;opacity:0.6;margin-top:0.75rem}
+
+/* PROVINCE GRID */
+.province-section{padding:1.5rem 1rem 0.75rem;max-width:900px;margin:0 auto;width:100%}
+.province-grid{display:grid;gap:0.5rem}
+.province-card{display:block;padding:0.7rem 0.85rem;border-radius:8px;text-decoration:none;font-size:0.9rem;transition:all 0.15s;background:var(--white);border:1px solid var(--border);color:var(--text);font-weight:600;box-shadow:var(--shadow)}
+.province-card:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,.1);border-color:var(--blue)}
+.province-card .abbr{font-size:0.7rem;opacity:0.45;margin-left:0.35rem;text-transform:uppercase}
+
+/* FEATURES */
+.features{max-width:900px;margin:0 auto;padding:0 1rem 2rem;width:100%}
+.features h2{font-size:1rem;color:var(--gray);text-align:center;margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.04em}
+.feature-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0.75rem}
+.feature-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:1rem 1.1rem}
+.feature-card h3{font-size:0.9rem;margin-bottom:0.25rem;color:var(--navy)}
+.feature-card p{font-size:0.8rem;color:var(--gray)}
+
+/* LANGUAGE TOGGLE */
+.lang-en, .lang-fr{transition:opacity 0.15s}
+.lang-fr{display:none}
+body.fr .lang-en{display:none}
+body.fr .lang-fr{display:block}
+body.fr .province-card .name.lang-fr{display:inline}
+
+/* FOOTER */
+footer{text-align:center;padding:1.25rem;color:var(--gray);font-size:0.75rem;margin-top:auto;border-top:1px solid var(--border);background:var(--white)}
+
+/* RESPONSIVE */
+@media(max-width:480px){
+  header h1{font-size:0.95rem}
+  header img{height:34px}
+  .hero{padding:1.5rem 0.75rem 1.25rem}
+  .hero h2{font-size:1.2rem}
+  .hero h2 .line2{font-size:1.5rem}
+  .province-grid{grid-template-columns:1fr 1fr}
+  .province-card{padding:0.55rem 0.7rem;font-size:0.82rem}
+  .feature-list{grid-template-columns:1fr}
+}
+@media(min-width:481px) and (max-width:768px){
+  .province-grid{grid-template-columns:1fr 1fr}
+}
+@media(min-width:769px){
+  .province-grid{grid-template-columns:repeat(3,1fr)}
+  .hero{padding:3rem 1rem 2.25rem}
+  .hero h2{font-size:1.7rem}
+  .hero h2 .line2{font-size:2.4rem}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<a href="/"><img src="/logo-balance.png" alt="Balance - Service Animal Access Guide"></a>
+<h1 class="lang-en">Service Animal Access Guide</h1>
+<h1 class="lang-fr">Guide d'accès — Animaux d'assistance</h1>
+<div class="lang-toggle">
+<button class="lang-btn active" onclick="document.body.className='';this.classList.add('active');this.nextElementSibling.classList.remove('active')">EN</button>
+<button class="lang-btn" onclick="document.body.className='fr';this.classList.add('active');this.previousElementSibling.classList.remove('active')">FR</button>
+</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-inner lang-en">
+<h2>Denied access with your service dog?<span class="line2">You have rights.</span></h2>
+<p class="sub">Each guide gives you the exact law, the words to say, and the steps to take — based on your province's specific legislation. Read it on your phone, at the door.</p>
+<p class="tagline">Terrain-ready · 4-minute reads · Verified legislation</p>
+</div>
+<div class="hero-inner lang-fr">
+<h2>Refus d'accès avec<br>votre chien d'assistance ?<br>Vous avez des droits.</h2>
+<p class="sub">Chaque guide vous donne la loi exacte, les mots à dire et les démarches à suivre — pour votre province. À lire sur votre téléphone, à la porte.</p>
+<p class="tagline">Pour le terrain · 4 minutes · Législation vérifiée</p>
+</div>
+</section>
+
+<section class="province-section">
+<div class="province-grid">
+<a href="/on/" class="province-card"><span class="name">Ontario</span><span class="abbr">ON</span></a>
+<a href="/bc/" class="province-card"><span class="name lang-en">British Columbia</span><span class="name lang-fr">Colombie-Britannique</span><span class="abbr">BC</span></a>
+<a href="/qc/" class="province-card"><span class="name">Québec</span><span class="abbr">QC</span></a>
+<a href="/ab/" class="province-card"><span class="name">Alberta</span><span class="abbr">AB</span></a>
+<a href="/sk/" class="province-card"><span class="name lang-en">Saskatchewan</span><span class="name lang-fr">Saskatchewan</span><span class="abbr">SK</span></a>
+<a href="/mb/" class="province-card"><span class="name">Manitoba</span><span class="abbr">MB</span></a>
+<a href="/ns/" class="province-card"><span class="name lang-en">Nova Scotia</span><span class="name lang-fr">Nouvelle-Écosse</span><span class="abbr">NS</span></a>
+<a href="/nb/" class="province-card"><span class="name lang-en">New Brunswick</span><span class="name lang-fr">Nouveau-Brunswick</span><span class="abbr">NB</span></a>
+<a href="/pe/" class="province-card"><span class="name lang-en">Prince Edward Island</span><span class="name lang-fr">Île-du-Prince-Édouard</span><span class="abbr">PE</span></a>
+<a href="/nl/" class="province-card"><span class="name lang-en">Newfoundland &amp; Labrador</span><span class="name lang-fr">Terre-Neuve-et-Labrador</span><span class="abbr">NL</span></a>
+<a href="/yt/" class="province-card"><span class="name">Yukon</span><span class="abbr">YT</span></a>
+<a href="/nt/" class="province-card"><span class="name lang-en">Northwest Territories</span><span class="name lang-fr">Territoires du Nord-Ouest</span><span class="abbr">NT</span></a>
+<a href="/nu/" class="province-card"><span class="name">Nunavut</span><span class="abbr">NU</span></a>
+</div>
+</section>
+
+<section class="features lang-en">
+<h2>What's in each guide</h2>
+<div class="feature-list">
+<div class="feature-card">
+<h3>⚡ Ground Response</h3>
+<p>What to say and do when denied access. Read it at the door, on your phone.</p>
+</div>
+<div class="feature-card">
+<h3>⚖️ Legal Basis</h3>
+<p>The actual laws and regulations that protect your right to enter.</p>
+</div>
+<div class="feature-card">
+<h3>📋 Key Definitions</h3>
+<p>Who is protected, what qualifies, and what staff can legally ask.</p>
+</div>
+<div class="feature-card">
+<h3>📝 Recourse</h3>
+<p>Exactly how to file a complaint, deadlines, and who to contact.</p>
+</div>
+<div class="feature-card">
+<h3>🔍 Exceptions &amp; Responsibility</h3>
+<p>Exceptions to access and your responsibilities as a handler.</p>
+</div>
+</div>
+</section>
+
+<section class="features lang-fr">
+<h2>Ce que contient chaque guide</h2>
+<div class="feature-list">
+<div class="feature-card">
+<h3>⚡ Réponse terrain</h3>
+<p>Que dire et faire en cas de refus d'accès. À lire sur votre téléphone, à la porte.</p>
+</div>
+<div class="feature-card">
+<h3>⚖️ Base légale</h3>
+<p>Les lois et règlements qui protègent votre droit d'accès.</p>
+</div>
+<div class="feature-card">
+<h3>📋 Définitions clés</h3>
+<p>Qui est protégé, ce qui est couvert, ce que le personnel peut demander.</p>
+</div>
+<div class="feature-card">
+<h3>📝 Recours</h3>
+<p>Comment porter plainte, les délais, et qui contacter.</p>
+</div>
+<div class="feature-card">
+<h3>🔍 Exceptions et responsabilités</h3>
+<p>Les exceptions à l'accès et vos responsabilités comme maître-chien.</p>
+</div>
+</div>
+</section>
+
+<footer>
+<p class="lang-en">Based on provincial and territorial legislation. Not legal advice. · Up-to-date: June 2026</p>
+<p class="lang-fr">Basé sur les lois provinciales et territoriales. Pas un avis juridique. · Mise à jour : Juin 2026</p>
+<p>serviceanimal.ca</p>
+<p><a href="/feedback.html" style="color:var(--blue);text-decoration:none;font-size:0.78rem"><span class="lang-en">Feedback</span><span class="lang-fr">Commentaires</span></a></p>
+</footer>
+</body>
+</html>

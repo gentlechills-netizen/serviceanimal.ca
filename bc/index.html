@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dog Access Guide — British Columbia</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128.png">
+<style>
+/* === RESET === */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+/* === VARIABLES === */
+:root{--navy:#16213e;--light:#f5f6fa;--blue:#2563eb;--white:#fff;--text:#1a1a2e;--border:#e0e7ff;--gray:#64748b;--radius:10px;--shadow:0 1px 4px rgba(0,0,0,.08)}
+/* === BASE === */
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,sans-serif;color:var(--text);background:var(--light);line-height:1.6}
+/* === HEADER === */
+header{background:var(--navy);color:var(--white);padding:0.6rem 1rem;min-height:64px;display:flex;align-items:center}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0.75rem;flex-wrap:wrap}
+.header-logo{height:48px;width:auto;flex-shrink:0}
+.header-text{text-align:center}
+header h1{font-size:1.2rem;margin:0;line-height:1.3}
+header p{font-size:0.78rem;opacity:0.8;margin-top:0.05rem}
+/* === PROVINCE SELECTOR === */
+.province-selector{display:flex;align-items:center;gap:0.35rem}
+.province-selector label{font-size:0.78rem;opacity:0.9;white-space:nowrap}
+.province-selector select{padding:0.3rem 0.4rem;border-radius:5px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.12);color:var(--white);font-size:0.82rem;cursor:pointer;max-width:160px}
+.province-selector select option{background:var(--navy);color:var(--white)}
+/* === HAMBURGER === */
+.hamburger{display:none;background:none;border:none;color:var(--white);font-size:1.6rem;cursor:pointer;padding:0.2rem;line-height:1;margin-left:auto}
+/* === LAYOUT === */
+.page-layout{display:flex;gap:1.5rem;max-width:1200px;margin:1rem auto;padding:0 1rem}
+/* === SIDEBAR === */
+.page-layout nav.sidebar{width:220px;flex-shrink:0;position:sticky;top:0.5rem;align-self:flex-start;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:0.5rem 0;max-height:calc(100vh - 1rem);overflow-y:auto}
+nav.sidebar a{display:block;padding:0.4rem 0.75rem;color:var(--navy);text-decoration:none;font-size:0.82rem;border-left:3px solid transparent;transition:background 0.15s,border-color 0.15s}
+nav.sidebar a:hover,nav.sidebar a.active{background:var(--border);border-left-color:var(--blue);font-weight:600}
+nav.sidebar .part-label{font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--gray);padding:0.5rem 0.75rem 0.15rem;border-left-color:transparent}
+nav.sidebar .part-label:hover{background:transparent;border-left-color:transparent}
+/* === MAIN === */
+main{flex:1;min-width:0;background:var(--white);padding:1.5rem 2rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+main h1{font-size:1.6rem;margin-bottom:0.75rem;color:var(--navy);border-bottom:2px solid var(--border);padding-bottom:0.4rem}
+main h2{font-size:1.2rem;margin:1.25rem 0 0.5rem;color:#1e3a5f}
+main h3{font-size:1.05rem;margin:1rem 0 0.4rem;color:#2d4a74}
+main p{margin-bottom:0.75rem}
+main a{color:var(--blue);text-decoration:underline}
+main ul,main ol{margin:0.4rem 0 0.75rem 1.5rem}
+main li{margin-bottom:0.2rem}
+main hr{margin:1.2rem 0;border:none;border-top:1px solid var(--border)}
+main blockquote{background:#f0f4ff;border-left:4px solid var(--blue);padding:0.6rem 1rem;margin:0.75rem 0;border-radius:0 6px 6px 0}
+main .btn{display:inline-block;background:var(--blue);color:var(--white)!important;text-decoration:none!important;padding:0.5rem 1.1rem;border-radius:6px;font-weight:600;font-size:0.88rem;transition:background 0.2s}
+main .btn:hover{background:#1d4ed8}
+main .btn-outline{display:inline-block;background:transparent;color:var(--blue)!important;text-decoration:none!important;padding:0.45rem 1rem;border-radius:6px;font-weight:600;font-size:0.88rem;border:2px solid var(--blue);transition:all 0.2s}
+main .btn-outline:hover{background:var(--blue);color:var(--white)!important}
+/* === PART NAV (PILLS) === */
+.part-nav{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;padding:0.75rem;background:var(--light);border-radius:8px}
+.part-nav a{display:inline-block;padding:0.35rem 0.65rem;color:var(--navy);text-decoration:none;border-radius:5px;font-size:0.82rem;background:var(--white);border:1px solid var(--border);transition:all 0.15s}
+.part-nav a:hover{background:var(--blue);color:var(--white);border-color:var(--blue)}
+/* === SECTIONS === */
+.part{scroll-margin-top:1rem;padding-top:0.5rem}
+.part h2{display:flex;align-items:center;gap:0.5rem;border-bottom:2px solid var(--border);padding-bottom:0.35rem}
+.part h2.lang-fr{display:none!important}
+body.fr .part h2.lang-en{display:none}
+body.fr .part h2.lang-fr{display:flex}
+.part h2 .part-num{background:var(--navy);color:var(--white);font-size:0.75rem;border-radius:50%;width:1.6em;height:1.6em;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+/* === FOOTER === */
+footer{text-align:center;padding:1.25rem;color:var(--gray);font-size:0.78rem;margin-top:1rem;border-top:1px solid var(--border);background:var(--white)}
+/* === BACK TO TOP === */
+.back-top{display:block;text-align:right;font-size:0.8rem;margin-top:0.5rem}
+/* === RESPONSIVE === */
+@media(max-width:768px){
+  header{padding:0.5rem 0.6rem}
+  .header-inner{gap:0.4rem}
+  .header-logo{height:38px}
+  .header-text{min-width:140px}
+  header h1{font-size:1rem}
+  header p{font-size:0.72rem}
+  .province-selector{order:3;width:100%}
+  .province-selector select{width:100%;max-width:none}
+  .hamburger{display:block;order:2}
+  .page-layout{flex-direction:column;padding:0 0.5rem;margin:0.5rem auto}
+  .page-layout nav.sidebar{width:100%;display:none;position:static;max-height:none;margin-bottom:0;border-radius:var(--radius)}
+  .page-layout nav.sidebar.open{display:block}
+  main{padding:1rem;border-radius:8px}
+  main h1{font-size:1.3rem}
+  .part-nav{gap:0.25rem;padding:0.5rem}
+  .part-nav a{font-size:0.78rem;padding:0.3rem 0.5rem}
+}
+@media(min-width:769px){
+  .page-layout nav.sidebar{display:block!important}
+}
+</style>
+</head>
+<body>
+<div class="page-layout">
+<main>
+<div class="part-nav">
+<a href="#part1">1. On the Ground</a>
+<a href="#part2">2. Legal Basis</a>
+<a href="#part3">3. Definitions</a>
+<a href="#part4">4. Recourse</a>
+<a href="#part5">5. Exceptions</a>
+</div>
+
+<section id="part1" class="part">
+<h2><span class="part-num">1</span> On the Ground — What to Do When Denied Access</h2>
+
+<p>You are <strong>legally entitled</strong> to enter any public place with your service animal in British Columbia. Certification under the <em>Guide Dog and Service Dog Act</em> is <strong>voluntary</strong> — you do not need it to access most public places. If you are denied access, stay calm and follow these steps:</p>
+
+<ol>
+<li><strong>State your right</strong>: "This is a service animal required for my disability. Under BC law, you must allow me entry. The <em>Guide Dog and Service Dog Act</em> (SBC 2015, c. 17) guarantees access for service dog teams, and the <em>BC Human Rights Code</em> protects me from discrimination."</li>
+<li><strong>Know your status</strong>: If you are certified under the GDSDA, you have a direct right of access under s. 2 of the Act. If you are not certified, you are still protected from discrimination under the BC Human Rights Code.</li>
+<li><strong>Ask for a manager</strong>: If the employee refuses, politely ask to speak with the person in charge. Front-line staff often do not know the law.</li>
+<li><strong>Do not leave voluntarily</strong>: You have the right to be there. If they insist, tell them you will file a human rights complaint. Say: "I will file a complaint with the BC Human Rights Tribunal. Denying access to a person with a service animal is discrimination."</li>
+<li><strong>Document everything</strong>: Write down the date, time, location, names of staff involved, and what was said. Take notes on your phone immediately.</li>
+<li><strong>Leave only if necessary</strong>: If the situation escalates or you feel unsafe, leave and file a complaint afterward. Your safety comes first.</li>
+</ol>
+
+<h3>Key Points to Remember</h3>
+<ul>
+<li>Certification under the GDSDA is <strong>voluntary</strong> — you do not need it for access.</li>
+<li>If you are certified, carry your certificate or identification card for ease of reference.</li>
+<li>If you are not certified, the BC Human Rights Code still protects you.</li>
+<li>No one can charge you extra fees because of your service animal.</li>
+<li>Your service animal must be under your control (leash or harness) at all times.</li>
+<li>If your animal is out of control or not housebroken, you may be asked to leave.</li>
+</ul>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+<hr>
+
+<section id="part2" class="part">
+<h2><span class="part-num">2</span> Legal Basis</h2>
+
+<p>Service animal access in British Columbia is protected by two legal frameworks:</p>
+
+<h3>Guide Dog and Service Dog Act (GDSDA)</h3>
+<p>The <em>Guide Dog and Service Dog Act</em>, SBC 2015, c. 17, gives certified teams the right to enter and use any place to which the public is invited or has access (s. 2). This includes restaurants, stores, public transit, parks, hospitals, and government buildings.</p>
+
+<p>Key provisions of the Act:</p>
+<ul>
+<li><strong>Section 2(1):</strong> A guide dog team, service dog team, or dog-in-training team may enter any public place.</li>
+<li><strong>Section 2(2):</strong> No person shall charge a fee for the dog accompanying a team.</li>
+<li><strong>Section 4:</strong> No person shall falsely represent a dog as being a member of a certified team.</li>
+<li><strong>Section 8:</strong> It is an offence to deny access — liable on conviction to a fine of up to <strong>$3,000</strong>.</li>
+</ul>
+
+<h3>BC Human Rights Code</h3>
+<p>The <em>BC Human Rights Code</em>, RSBC 1996, c. 210, prohibits discrimination based on disability (s. 8). This applies to <strong>all</strong> service animal handlers, regardless of whether they hold GDSDA certification. A business that denies access to a person with a disability accompanied by a service animal is discriminating under the Code.</p>
+
+<p>The Human Rights Code is broader than the GDSDA — it protects handlers even if their animal is not formally certified. Together, these laws ensure that people with disabilities can access public life with their service animals.</p>
+
+<p><strong>Requesting proof of service animal status:</strong> Where a person's disability and reliance on a guide or service dog is obvious (e.g., a blind person with a guide dog in harness), demanding identification or proof may be discriminatory (Feldman v. Superstore, 1997 BCHRT 18). Where it is not obvious, a service provider may ask if the dog is a guide or service dog. Not liking dogs is not a valid reason to deny service.</p>
+
+<p>Official BC Human Rights Commission resource: <a href="https://bchumanrights.ca/guide-dogs"><strong>bchumanrights.ca/guide-dogs</strong></a></p>
+
+<h3>Key Legal References</h3>
+<ul>
+<li><strong>GDSDA:</strong> <a href="https://canlii.ca/t/8v18">SBC 2015, c. 17</a> — Guide Dog and Service Dog Act</li>
+<li><strong>GDSD Regulation:</strong> <a href="https://canlii.ca/t/8z2q">BC Reg 223/2015</a> — Guide Dog and Service Dog Regulation</li>
+<li><strong>BC Human Rights Code:</strong> <a href="https://canlii.ca/t/843q">RSBC 1996, c. 210</a></li>
+</ul>
+
+<h3>Key BC Jurisprudence</h3>
+<ul>
+<li><strong>Feldman v. The Real Canadian Superstore</strong> (1997 BCHRT 18) — Demanding identification for an obviously identifiable guide dog is discriminatory.</li>
+<li><strong>Belusic v. Yellow Cab of Victoria</strong> (2018 BCHRT 81) — Cancelling a taxi because of a guide dog is discrimination under s. 8 of the Code.</li>
+</ul>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+<hr>
+
+<section id="part3" class="part">
+<h2><span class="part-num">3</span> Key Definitions</h2>
+
+<h3>Who is protected</h3>
+<p>Under the GDSDA, a <strong>blind person</strong> (who requires a guide dog) and a <strong>person with a disability</strong> (who requires a service dog) are protected — but only if they hold certification. Under the BC Human Rights Code, <strong>any person with a disability</strong> who uses a service animal for disability-related tasks is protected from discrimination, <strong>regardless of certification status</strong>.</p>
+
+<h3>What qualifies under the GDSDA (certified)</h3>
+<p>The GDSDA is a certification-based system. Only certified teams are protected under this Act. It defines these categories:</p>
+<ul>
+<li><strong>Guide dog team:</strong> A blind person and a certified guide dog.</li>
+<li><strong>Service dog team:</strong> A person with a disability and a certified service dog trained to perform specific tasks.</li>
+<li><strong>Dog-in-training team:</strong> A dog trainer and a dog being trained to become a guide or service dog.</li>
+<li><strong>Retired guide or service dog team:</strong> A former team living together, certified as retired.</li>
+</ul>
+
+<h3>What qualifies under the BC Human Rights Code (non-certified)</h3>
+<p>Under the BC Human Rights Code, a service animal is defined by <strong>function, not certification</strong>. If you have a disability and your dog assists you with tasks related to that disability, you are protected from discrimination — even if you do not hold GDSDA certification. No specific training program, certification, or identification card is required under the Code.</p>
+<p><strong>In practice:</strong> Most service animal handlers in BC fall into this category. Certification is optional.</p>
+
+<h3>Certification — Two Pathways (Voluntary)</h3>
+<p>British Columbia offers two ways to obtain certification, but <strong>neither is mandatory</strong> for access:</p>
+<ul>
+<li><strong>ADI/IGDF Pathway:</strong> If your team graduated from an Assistance Dogs International (ADI) or International Guide Dog Federation (IGDF) accredited school, you are automatically deemed certified (s. 6.1 of the Act). Your school-issued identification card is your certificate.</li>
+<li><strong>BC Assessment Pathway:</strong> For dogs not trained by an ADI/IGDF school, apply to the Registrar and pass a BC assessment with written confirmation from a medical practitioner.</li>
+</ul>
+
+<h3>Not covered</h3>
+<ul>
+<li><strong>Emotional support animals (ESAs)</strong> — not covered under the GDSDA. ESAs lack the task-specific training required by s. 1 of the Act and are not eligible for certification (<a href="https://www2.gov.bc.ca/gov/content/justice/human-rights/guide-and-service-dog">BC Gov source</a>).</li>
+<li>Therapy animals used in clinical settings</li>
+<li>Animals other than dogs (only dogs are covered by the GDSDA)</li>
+<li>Pets</li>
+</ul>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+
+<hr>
+
+<section id="part4" class="part">
+<h2><span class="part-num">4</span> Recourse — Filing a Complaint</h2>
+
+<p>If you were denied access or treated unfairly because of your service animal, you have options.</p>
+
+<h3>Option 1: BC Human Rights Tribunal</h3>
+<p>File a complaint under the <em>BC Human Rights Code</em>. There is <strong>no fee</strong> to file.</p>
+<ul>
+<li><strong>Deadline:</strong> You must file within <strong>1 year</strong> of the incident.</li>
+<li><strong>How to file:</strong> Visit <a href="https://www.bchrt.bc.ca/">bchrt.bc.ca</a> to file a complaint online.</li>
+<li><strong>What you can get:</strong> The Tribunal can order an apology, compensation for injury to dignity, and policy changes.</li>
+</ul>
+
+<h3>Option 2: Official complaint to Security Programs</h3>
+<p>Certified handlers who believe they have been wrongly denied access may submit a complaint to the BC Security Programs Division:</p>
+<ul>
+<li><strong>Online form:</strong> <a href="https://forms.gov.bc.ca/justice/ce-complaint/">forms.gov.bc.ca/justice/ce-complaint/</a></li>
+<li><strong>Email:</strong> <a href="mailto:guideandservicedogs@gov.bc.ca">guideandservicedogs@gov.bc.ca</a></li>
+<li><strong>Phone:</strong> 1-855-587-0185 (Option 5), Mon–Fri 9am–4pm</li>
+</ul>
+<p>Alternatively, if the denial was knowing, the person may be charged under s. 8 of the Act (fine up to <strong>$3,000</strong>). Contact local police or the Registrar of Guide Dogs and Service Dogs to report the violation.</p>
+
+<h3>Free legal help</h3>
+<ul>
+<li><strong>BC Human Rights Clinic:</strong> 1-855-685-6222 · <a href="https://www.bchrc.net">BCHRC.net</a></li>
+<li><strong>UVic Law Centre</strong> (Victoria): 1-866-385-1221 · reception@thelawcentre.ca</li>
+</ul>
+
+<h3>Before filing — try a formal notice</h3>
+<p>Sending a letter to the business before filing often resolves the issue quickly. State the law clearly, describe the incident, and explain the legal consequences of continued denial.</p>
+
+<h3>What to include in your complaint</h3>
+<ul>
+<li>Date, time, and location of the incident</li>
+<li>Names of the people who denied you access</li>
+<li>Any witnesses or their contact information</li>
+<li>A description of what happened, what was said</li>
+<li>Any documentation (emails, medical letters, photos)</li>
+<li>Your certification status, if applicable</li>
+</ul>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+<hr>
+
+<section id="part5" class="part">
+<h2><span class="part-num">5</span> Exceptions &amp; Handler&#39;s Responsibility</h2>
+
+<ul>
+<li>Keep your animal under control at all times — leash or harness is required</li>
+<li>Your dog must not occupy a seat in a public conveyance or where food is served</li>
+<li>Ensure your animal is housebroken</li>
+<li>If your animal is out of control, you may be asked to leave</li>
+</ul>
+
+<h3>Exceptions</h3>
+<ul>
+<li><strong>Food service areas:</strong> The dog must not occupy a seat where food is served or dispensed</li>
+<li><strong>Health facilities:</strong> Service dogs may be restricted in operating rooms, burn units, and sterile areas</li>
+<li><strong>Allergies or fear of dogs:</strong> Not valid reasons to deny access. Offer separate seating to accommodate both parties.</li>
+<li><strong>Direct threat:</strong> If the animal poses a genuine, direct threat to health or safety (not speculation), access may be limited</li>
+</ul>
+
+<h3>Note on enforcement</h3>
+<p>The GDSDA makes it an offence to deny access, with fines up to $3,000. The BC Human Rights Tribunal can also award damages for injury to dignity, feelings, and self-respect. In practice, informing the business of their legal obligations resolves most access issues quickly.</p>
+
+<p><a href="https://canlii.ca/t/843q" class="btn-outline">BC Human Rights Code (CanLII) →</a></p>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+
+</main>
+</div>
+</body>
+</html>

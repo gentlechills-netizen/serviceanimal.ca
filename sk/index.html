@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dog Access Guide — Saskatchewan</title><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128.png">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#16213e;--light:#f5f6fa;--blue:#2563eb;--white:#fff;--text:#1a1a2e;--border:#e0e7ff;--gray:#64748b;--radius:10px;--shadow:0 1px 4px rgba(0,0,0,.08)}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,sans-serif;color:var(--text);background:var(--light);line-height:1.6}
+header{background:var(--navy);color:var(--white);padding:0.6rem 1rem;min-height:64px;display:flex;align-items:center}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0.75rem;flex-wrap:wrap}
+.header-logo{height:48px;width:auto;flex-shrink:0}
+.header-text{text-align:center}
+header h1{font-size:1.2rem;margin:0;line-height:1.3}
+header p{font-size:0.78rem;opacity:0.8;margin-top:0.05rem}
+.province-selector{display:flex;align-items:center;gap:0.35rem}
+.province-selector label{font-size:0.78rem;opacity:0.9;white-space:nowrap}
+.province-selector select{padding:0.3rem 0.4rem;border-radius:5px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.12);color:var(--white);font-size:0.82rem;cursor:pointer;max-width:160px}
+.province-selector select option{background:var(--navy);color:var(--white)}
+.hamburger{display:none;background:none;border:none;color:var(--white);font-size:1.6rem;cursor:pointer;padding:0.2rem;line-height:1;margin-left:auto}
+.page-layout{display:flex;gap:1.5rem;max-width:1200px;margin:1rem auto;padding:0 1rem}
+.page-layout nav.sidebar{width:220px;flex-shrink:0;position:sticky;top:0.5rem;align-self:flex-start;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:0.5rem 0;max-height:calc(100vh - 1rem);overflow-y:auto}
+nav.sidebar a{display:block;padding:0.4rem 0.75rem;color:var(--navy);text-decoration:none;font-size:0.82rem;border-left:3px solid transparent;transition:background 0.15s,border-color 0.15s}
+nav.sidebar a:hover,nav.sidebar a.active{background:var(--border);border-left-color:var(--blue);font-weight:600}
+nav.sidebar .part-label{font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--gray);padding:0.5rem 0.75rem 0.15rem;border-left-color:transparent}
+nav.sidebar .part-label:hover{background:transparent;border-left-color:transparent}
+main{flex:1;min-width:0;background:var(--white);padding:1.5rem 2rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+main h1{font-size:1.6rem;margin-bottom:0.75rem;color:var(--navy);border-bottom:2px solid var(--border);padding-bottom:0.4rem}
+main h2{font-size:1.2rem;margin:1.25rem 0 0.5rem;color:#1e3a5f}
+main h3{font-size:1.05rem;margin:1rem 0 0.4rem;color:#2d4a74}
+main p{margin-bottom:0.75rem}
+main a{color:var(--blue);text-decoration:underline}
+main ul,main ol{margin:0.4rem 0 0.75rem 1.5rem}
+main li{margin-bottom:0.2rem}
+main hr{margin:1.2rem 0;border:none;border-top:1px solid var(--border)}
+main blockquote{background:#f0f4ff;border-left:4px solid var(--blue);padding:0.6rem 1rem;margin:0.75rem 0;border-radius:0 6px 6px 0}
+main .btn{display:inline-block;background:var(--blue);color:var(--white)!important;text-decoration:none!important;padding:0.5rem 1.1rem;border-radius:6px;font-weight:600;font-size:0.88rem;transition:background 0.2s}
+main .btn:hover{background:#1d4ed8}
+.part-nav{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;padding:0.75rem;background:var(--light);border-radius:8px}
+.part-nav a{display:inline-block;padding:0.35rem 0.65rem;color:var(--navy);text-decoration:none;border-radius:5px;font-size:0.82rem;background:var(--white);border:1px solid var(--border);transition:all 0.15s}
+.part-nav a:hover{background:var(--blue);color:var(--white);border-color:var(--blue)}
+.part{scroll-margin-top:1rem;padding-top:0.5rem}
+.part h2{display:flex;align-items:center;gap:0.5rem;border-bottom:2px solid var(--border);padding-bottom:0.35rem}
+.part h2.lang-fr{display:none!important}
+body.fr .part h2.lang-en{display:none}
+body.fr .part h2.lang-fr{display:flex}
+.part h2 .part-num{background:var(--navy);color:var(--white);font-size:0.75rem;border-radius:50%;width:1.6em;height:1.6em;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+footer{text-align:center;padding:1.25rem;color:var(--gray);font-size:0.78rem;margin-top:1rem;border-top:1px solid var(--border);background:var(--white)}
+.back-top{display:block;text-align:right;font-size:0.8rem;margin-top:0.5rem}
+@media(max-width:768px){
+  header{padding:0.5rem 0.6rem}
+  .header-inner{gap:0.4rem}
+  .header-logo{height:38px}
+  .header-text{min-width:140px}
+  header h1{font-size:1rem}
+  header p{font-size:0.72rem}
+  .province-selector{order:3;width:100%}
+  .province-selector select{width:100%;max-width:none}
+  .hamburger{display:block;order:2}
+  .page-layout{flex-direction:column;padding:0 0.5rem;margin:0.5rem auto}
+  .page-layout nav.sidebar{width:100%;display:none;position:static;max-height:none;margin-bottom:0;border-radius:var(--radius)}
+  .page-layout nav.sidebar.open{display:block}
+  main{padding:1rem;border-radius:8px}
+  main h1{font-size:1.3rem}
+  .part-nav{gap:0.25rem;padding:0.5rem}
+  .part-nav a{font-size:0.78rem;padding:0.3rem 0.5rem}
+}
+@media(min-width:769px){
+  .page-layout nav.sidebar{display:block!important}
+}
+</style>
+</head>
+<body>
+<div class="page-layout">
+<main>
+<div class="part-nav">
+<a href="#part1">1. Ground Response</a>
+<a href="#part2">2. Legal Framework</a>
+<a href="#part3">3. Definitions</a>
+<a href="#part4">4. Recourse</a>
+<a href="#part5">5. Exceptions</a>
+</div>
+
+<section id="part1" class="part">
+<h2><span class="part-num">1</span> Ground Response — What to Do When Denied</h2>
+
+<p>Protection comes from the <em>Human Rights Code, 2018</em> (SS 2018, c S-24.2), which prohibits disability discrimination in services, accommodation, and employment. Your animal qualifies if <strong>trained to perform specific tasks for a disability</strong> — self-training counts.</p>
+
+<ol>
+<li><strong>Stay calm, state your rights</strong> : "This is a service animal trained to assist me with a disability. Under <em>The Saskatchewan Human Rights Code</em>, you cannot discriminate against me because of my reliance on a service animal."</li>
+<li><strong>Explain what the animal does</strong> : Be ready to describe the task it's trained to perform (e.g., "retrieves items I drop," "alerts me to medical episodes"). You do not have to disclose your diagnosis.</li>
+<li><strong>No proof required</strong> : Saskatchewan has no certification, no ID card, no registry. Online registries like "Official Service Dog Registry" or "Service Dogs America" have no legal standing in Canada (<a href="https://canlii.ca/t/j22lv">Roberts Properties v O.S., 2018 SKORT 177</a>). Fees are a scam.</li>
+<li><strong>If still refused, leave and file</strong> : Document and file a complaint with the Human Rights Commission.</li>
+</ol>
+
+<h3>What staff can ask</h3>
+<ul>
+<li><strong>Reasonable</strong> : "What task is your animal trained to perform?" and "Is it trained to assist with a disability?"</li>
+<li><strong>Never allowed</strong> : "What's your disability?", "Show certification", "Prove it", vaccination or licensing proof</li>
+</ul>
+
+<h3>No-pet policies don't apply</h3>
+<ul>
+<li>A genuine service animal overrides a no-pet policy (<a href="https://canlii.ca/t/j22lv">Roberts Properties, 2018 SKORT 177</a>)</li>
+<li>Landlords cannot refuse tenancy or charge pet fees for a service animal</li>
+<li>If the animal is not under control, access may be refused</li>
+</ul>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+<hr>
+
+<section id="part2" class="part">
+<h2><span class="part-num">2</span> Legal Framework</h2>
+
+<blockquote>
+<p><strong>The Saskatchewan reality</strong> : No specific access law, no certification, no registry. The <em>Human Rights Code</em> is your only tool for access. The <em>Animal Protection Act</em> protects against interference — not access. The HR Commission policy guides what counts as a service animal.</p>
+</blockquote>
+
+<ul>
+<li><strong>Saskatchewan Human Rights Code, 2018</strong> (SS 2018, c S-24.2) — Section 12 prohibits discrimination in accommodation, services, and facilities on the basis of disability. Disability includes "physical reliance on a service animal, wheelchair or other remedial appliance or device" (s. 2(1)(d)(viii)).</li>
+<li><strong>Animal Protection Act, 2018</strong> (SS 2018, c A-21.2) — Defines "service animal" : an animal trained to be used by a person with a disability.</li>
+<li><strong>Human Rights Commission policy</strong> : The SK HR Commission has a detailed service animal policy listing recognized types (guide dogs, hearing dogs, mobility dogs, psychiatric service animals, seizure response dogs, social signal dogs) and requiring that training go beyond normal pet behaviour.</li>
+</ul>
+
+<h3>Key case</h3>
+<ul>
+<li><strong>Roberts Properties Inc. v O.S.</strong> (2018 SKORT 177) — Tenant registered dog with US-based "Official Service Dog Registry." Hearing officer found the training insufficient. Order for possession granted. Confirms : online "certification" from US registries has no legal standing in Saskatchewan. A genuine service animal must be trained beyond what a typical pet does.</li>
+</ul>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+<hr>
+
+<section id="part3" class="part">
+<h2><span class="part-num">3</span> Key Definitions</h2>
+
+<h3>What qualifies</h3>
+<ul>
+<li><strong>Definition</strong> (Animal Protection Act) : "An animal that is trained to be used by a person with a disability for reasons relating to his or her disability."</li>
+<li><strong>Training matters</strong> : The HR Commission policy requires training for specific tasks beyond what a normal pet does. Retrieving dropped items may count if genuinely task-trained, but won't if it's just natural breed behaviour.</li>
+<li><strong>Self-training is valid</strong> : No accredited organization required.</li>
+<li><strong>No vest, harness, or ID required</strong> : all optional.</li>
+</ul>
+
+<h3>Who is protected</h3>
+<ul>
+<li>Any person with a disability relying on a trained service animal — physical, sensory, mental health, neurological, intellectual.</li>
+<li>No certification needed. No registry exists in Saskatchewan.</li>
+</ul>
+
+<h3>What does NOT qualify</h3>
+<ul>
+<li><strong>ESAs and pets</strong> : The definition requires <strong>training</strong> for specific tasks. Comfort-by-presence alone does not qualify.</li>
+<li><strong>Online registry dogs</strong> : US-based online registrations (Official Service Dog Registry, Service Dogs America) carry no legal weight in Saskatchewan (<a href="https://canlii.ca/t/j22lv">Roberts Properties, 2018</a>).</li>
+</ul>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+<hr>
+
+<section id="part4" class="part">
+<h2><span class="part-num">4</span> Recourse — How to file a complaint</h2>
+
+<h3>Under the Human Rights Code</h3>
+<ul>
+<li><strong>Saskatchewan Human Rights Commission</strong> — no fee, no lawyer required. Handles discrimination in services, accommodation, and employment.</li>
+<li>Contact : <a href="https://saskatchewanhumanrights.ca/" target="_blank" rel="noopener">saskatchewanhumanrights.ca</a> | 306-933-5952 | toll-free 1-800-667-8577</li>
+</ul>
+
+<h3>Under the Animal Protection Act</h3>
+<ul>
+<li>Someone harms or interferes with your service animal? Report to <strong>local police</strong> or the <strong>Ministry of Agriculture</strong> (animal protection services). Provincial offence.</li>
+</ul>
+
+<h3>Steps</h3>
+<ol>
+<li><strong>Document</strong> : date, time, location, business, names, witnesses, photos</li>
+<li><strong>Write the business</strong> explaining the HR Code and their obligation to accommodate</li>
+<li><strong>File with the SK Human Rights Commission</strong> if unresolved</li>
+</ol>
+
+<p><a href="https://saskatchewanhumanrights.ca/" target="_blank" rel="noopener" class="btn">File a complaint →</a></p>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+<hr>
+
+<section id="part5" class="part">
+<h2><span class="part-num">5</span> Exceptions &amp; Handler's Responsibility</h2>
+
+<ul>
+<li><strong>Keep your animal under control</strong> : calm, focused, responsive. Uncontrolled behaviour = grounds for refusal</li>
+<li><strong>Training must be real</strong> : Your animal must perform specific trained tasks beyond normal pet behaviour. Roberts (2018) is the warning — natural breed instincts won't cut it</li>
+<li><strong>Clean up after your animal</strong> in public spaces</li>
+<li><strong>You are responsible for any damages</strong> your animal causes</li>
+</ul>
+
+<h3>Possible exceptions</h3>
+<ul>
+<li><strong>Sterile/restricted areas</strong> : operating rooms, burn units, food prep areas</li>
+<li><strong>Direct threat</strong> : demonstrated dangerous behaviour, not fear or allergies</li>
+<li><strong>Undue hardship</strong> : in housing and employment, accommodation applies up to undue hardship</li>
+</ul>
+
+<p><strong>Key takeaway</strong> : No certification, no registry. Your animal needs real task training — not an online registration. Know what your animal does, keep it under control, and file a complaint if refused.</p>
+
+<a href="#" class="back-top">↑ Back to top</a>
+</section>
+
+</main>
+</div>
+</body>
+</html>

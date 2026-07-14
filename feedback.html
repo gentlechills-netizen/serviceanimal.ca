@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Suggestions · Service Animal Access Guide</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128.png">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#16213e;--light:#f5f6fa;--blue:#2563eb;--white:#fff;--text:#1a1a2e;--border:#e0e7ff;--gray:#64748b;--radius:10px;--shadow:0 1px 4px rgba(0,0,0,.08)}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,sans-serif;color:var(--text);background:var(--light);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+
+/* HEADER */
+header{background:var(--navy);color:var(--white);padding:0.7rem 1rem;text-align:center}
+header h1{font-size:1rem;font-weight:600;opacity:0.9}
+header h1 span{opacity:0.5;margin:0 0.4rem}
+
+/* HERO */
+.hero{background:var(--navy);color:var(--white);padding:1.5rem 1rem;text-align:center}
+.hero h2{font-size:1.5rem;font-weight:700;margin-bottom:0.25rem}
+.hero p{font-size:0.85rem;opacity:0.7}
+
+/* FORM */
+.form-section{padding:2rem 1rem;max-width:520px;margin:0 auto;width:100%;flex:1}
+.form-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.75rem}
+.form-card label{display:block;font-size:0.8rem;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:0.03em;margin-bottom:0.25rem;margin-top:1rem}
+.form-card label:first-of-type{margin-top:0}
+.form-card input,.form-card textarea{width:100%;padding:0.6rem 0.75rem;border:1px solid var(--border);border-radius:6px;font-size:0.9rem;font-family:inherit;color:var(--text);background:var(--light);transition:border-color 0.15s}
+.form-card input:focus,.form-card textarea:focus{outline:none;border-color:var(--blue)}
+.form-card textarea{resize:vertical;min-height:120px}
+.form-card .submit-btn{background:var(--blue);color:var(--white);border:none;padding:0.65rem 1.5rem;border-radius:6px;font-size:0.9rem;font-weight:600;cursor:pointer;margin-top:1.25rem;transition:background 0.15s;width:100%}
+.form-card .submit-btn:hover{background:#1d4ed8}
+.form-card .submit-btn:disabled{opacity:0.5;cursor:not-allowed}
+.form-card .fs-error{color:#dc2626;font-size:0.8rem;display:block;margin-top:0.15rem}
+.form-card .fs-success{background:#dcfce7;color:#166534;padding:0.75rem 1rem;border-radius:6px;font-size:0.9rem;text-align:center;margin-bottom:1rem;display:none}
+.form-card .footnote{text-align:center;margin-top:1rem;font-size:0.82rem}
+.form-card .footnote a{color:var(--blue);text-decoration:none}
+.form-card .footnote a:hover{text-decoration:underline}
+.form-card .sep{color:var(--border);margin:0 0.35rem}
+
+/* FOOTER */
+footer{text-align:center;padding:1.25rem;color:var(--gray);font-size:0.75rem;margin-top:auto;border-top:1px solid var(--border);background:var(--white)}
+footer a{color:var(--gray);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media(max-width:480px){
+  header h1{font-size:0.85rem}
+  .hero{padding:1.25rem 0.75rem}
+  .hero h2{font-size:1.2rem}
+  .form-section{padding:1rem}
+  .form-card{padding:1.25rem}
+}
+</style>
+</head>
+<body>
+<header>
+<a href="/" style="color:var(--white);text-decoration:none"><h1>Access Guide <span>·</span> Guide d'accès</h1></a>
+</header>
+
+<section class="hero">
+<h2>Suggestions</h2>
+<p>I read all comments &nbsp;·&nbsp; Je lis tous vos messages</p>
+</section>
+
+<div class="form-section">
+<div class="form-card">
+
+<div data-fs-success class="fs-success">Thanks! Your message has been sent. &nbsp;·&nbsp; Merci ! Votre message a été envoyé.</div>
+
+<form id="feedback-form">
+<label>Name <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--gray)">/ Nom</span></label>
+<input type="text" id="name" name="name" data-fs-field />
+
+<label>Email <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--gray)">/ Courriel</span></label>
+<input type="email" id="email" name="email" required data-fs-field />
+<span data-fs-error="email"></span>
+
+<label>Message</label>
+<textarea id="message" name="message" required data-fs-field></textarea>
+<span data-fs-error="message"></span>
+
+<button type="submit" data-fs-submit-btn class="submit-btn">Send <span style="font-weight:400">/ Envoyer</span></button>
+</form>
+
+<p class="footnote"><a href="/">Home page <span class="sep">·</span> Accueil</a></p>
+</div>
+</div>
+
+<footer>
+<p><a href="/">serviceanimal.ca</a></p>
+</footer>
+
+<script>
+window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+formspree('initForm', { formElement: '#feedback-form', formId: 'mbdvdyop' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+</html>

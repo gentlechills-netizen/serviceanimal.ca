@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Service Animal Access Guide — Canada</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#16213e;--light:#f5f6fa;--blue:#2563eb;--white:#fff;--text:#1a1a2e;--border:#e0e7ff;--gray:#64748b;--radius:12px}
+body{font-family:system-ui,-apple-system,sans-serif;color:var(--text);background:var(--light);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+header{background:var(--navy);color:var(--white);padding:1rem 1.5rem;text-align:center}
+header img{height:70px;width:auto;margin-bottom:0.5rem}
+header h1{font-size:1.5rem;margin-bottom:0.2rem}
+header p{font-size:0.9rem;opacity:0.8}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#1e3a5f 100%);color:var(--white);text-align:center;padding:2.5rem 1rem}
+.hero h2{font-size:1.6rem;margin-bottom:0.75rem}
+.hero p{font-size:1rem;max-width:600px;margin:0 auto 1.5rem;opacity:0.9}
+.province-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0.75rem;max-width:800px;margin:0 auto;padding:0 1rem}
+.province-card{display:flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:0.75rem 1rem;color:var(--white);text-decoration:none;transition:all 0.2s;font-weight:500}
+.province-card:hover{background:rgba(255,255,255,0.2);transform:translateY(-2px)}
+.province-card .flag{font-size:1.3rem}
+.province-card .name{font-size:0.88rem}
+.province-card .tag{font-size:0.7rem;opacity:0.6;margin-left:auto}
+.features{max-width:900px;margin:0 auto;padding:2rem 1rem}
+.features h2{text-align:center;font-size:1.3rem;margin-bottom:1.5rem;color:var(--navy)}
+.feature-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.feature-card{background:var(--white);border-radius:var(--radius);box-shadow:0 1px 4px rgba(0,0,0,.08);padding:1.25rem;border-top:3px solid var(--blue)}
+.feature-card h3{font-size:1rem;margin-bottom:0.4rem;color:var(--navy)}
+.feature-card p{font-size:0.85rem;color:var(--gray)}
+.status-badge{display:inline-block;padding:0.15rem 0.5rem;border-radius:10px;font-size:0.7rem;font-weight:600}
+.status-live{background:#dcfce7;color:#166534}
+.status-soon{background:#fef3c7;color:#92400e}
+footer{text-align:center;padding:1.5rem;color:var(--gray);font-size:0.8rem;margin-top:auto;border-top:1px solid var(--border);background:var(--white)}
+@media(max-width:480px){
+  header h1{font-size:1.2rem}
+  .hero h2{font-size:1.3rem}
+  .province-grid{grid-template-columns:1fr 1fr}
+  .feature-list{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+<a href="/"><img src="/logo-balance.png" alt="Balance - Service Animal Access Guide"></a>
+<h1>Service Animal Access Guide</h1>
+<p>Your rights across Canada | Vos droits partout au Canada</p>
+</header>
+
+<section class="hero">
+<h2>Choose Your Province / Choisissez votre province</h2>
+<p>Immediate, practical guidance for service animal handlers facing access issues. Each guide is based on the specific laws of that province or territory.</p>
+<div class="province-grid">
+<a href="/on/" class="province-card"><span class="flag">🇨🇦</span><span class="name">Ontario</span><span class="tag status-live">✓ Live</span></a>
+<a href="/qc/" class="province-card"><span class="flag">🇨🇦</span><span class="name">Québec</span><span class="tag status-soon">Coming soon</span></a>
+<a href="/bc/" class="province-card"><span class="flag">🇨🇦</span><span class="name">British Columbia</span><span class="tag status-soon">Coming soon</span></a>
+<a href="/ab/" class="province-card"><span class="flag">🇨🇦</span><span class="name">Alberta</span><span class="tag status-soon">Coming soon</span></a>
+<a href="/sk/" class="province-card"><span class="flag">🇨🇦</span><span class="name">Saskatchewan</span><span class="tag status-soon">Coming soon</span></a>
+<a href="/mb/" class="province-card"><span class="flag">🇨🇦</span><span class="name">Manitoba</span><span class="tag status-soon">Coming soon</span></a>
+<a href="/ns/" class="province-card"><span class="flag">🇨🇦</span><span class="name">Nova Scotia</span><span class="tag status-soon">Coming soon</span></a>
+<a href="/nb/" class="province-card"><span class="flag">🇨🇦</span><span class="name">New Brunswick</span><span class="tag status-soon">Coming soon</span></a>
+<a href="/pe/" class="province-card"><span class="flag">🇨🇦</span><span class="name">PEI</span><span class="tag status-soon">Coming soon</span></a>
+<a href="/nl/" class="province-card"><span class="flag">🇨🇦</span><span class="name">Newfoundland &amp; Labrador</span><span class="tag status-soon">Coming soon</span></a>
+<a href="/yt/" class="province-card"><span class="flag">🇨🇦</span><span class="name">Yukon</span><span class="tag status-soon">Coming soon</span></a>
+<a href="/nt/" class="province-card"><span class="flag">🇨🇦</span><span class="name">Northwest Territories</span><span class="tag status-soon">Coming soon</span></a>
+<a href="/nu/" class="province-card"><span class="flag">🇨🇦</span><span class="name">Nunavut</span><span class="tag status-soon">Coming soon</span></a>
+</div>
+</section>
+
+<section class="features">
+<h2>What you'll find in each guide</h2>
+<div class="feature-list">
+<div class="feature-card">
+<h3>⚡ On-the-Ground Response</h3>
+<p>What to say and do immediately when denied access. Read it on your phone at the door.</p>
+</div>
+<div class="feature-card">
+<h3>⚖️ Legal Basis</h3>
+<p>The actual laws that protect your right to enter with your service animal.</p>
+</div>
+<div class="feature-card">
+<h3>📋 Key Definitions</h3>
+<p>Who is protected, what animals qualify, and what staff can legally ask.</p>
+</div>
+<div class="feature-card">
+<h3>📝 Recourse</h3>
+<p>Exactly how to file a complaint, deadlines, and templates you can use.</p>
+</div>
+<div class="feature-card">
+<h3>🔍 Context &amp; Nuances</h3>
+<p>Exceptions, responsibilities, and practical details for real situations.</p>
+</div>
+</div>
+</section>
+
+<footer>
+<p>Based on provincial and territorial human rights legislation. This is not legal advice.</p>
+<p>Service Animal Access Guide — serviceanimal.ca</p>
+</footer>
+</body>
+</html>

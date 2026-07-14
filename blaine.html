@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hi Blayne 👋 · Service Animal Access Guide</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon-128.png">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#16213e;--light:#f5f6fa;--blue:#2563eb;--white:#fff;--text:#1a1a2e;--border:#e0e7ff;--gray:#64748b;--radius:10px;--shadow:0 1px 4px rgba(0,0,0,.08)}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,sans-serif;color:var(--text);background:var(--light);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+
+/* HEADER */
+header{background:var(--navy);color:var(--white);padding:0.7rem 1rem;display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:0.6rem;width:100%}
+header img{height:42px;width:auto}
+header h1{font-size:1.1rem;margin:0}
+.lang-toggle{font-size:0.8rem;margin-left:auto;display:flex;gap:0.25rem;align-items:center}
+.lang-btn{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:var(--white);padding:0.2rem 0.5rem;border-radius:4px;cursor:pointer;font-size:0.78rem;transition:all 0.15s}
+.lang-btn.active{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.5);font-weight:600}
+.lang-btn:hover{background:rgba(255,255,255,0.2)}
+
+/* EASTER EGG HERO */
+.easter-hero{background:var(--navy);color:var(--white);padding:3rem 1rem;text-align:center}
+.easter-hero-inner{max-width:700px;margin:0 auto}
+.easter-hero h2{font-size:2.5rem;font-weight:800;margin-bottom:0.5rem}
+.easter-hero .sub{font-size:1.1rem;opacity:0.85;margin-bottom:0.25rem}
+.easter-hero .tagline{font-size:0.9rem;opacity:0.6}
+
+/* CONTENT */
+.easter-content{max-width:700px;margin:0 auto;padding:2rem 1.5rem;width:100%;flex:1}
+.easter-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:2rem 2.5rem}
+.easter-card p{margin-bottom:1rem;font-size:1rem}
+.easter-card .highlight{background:#f0f4ff;border-left:4px solid var(--blue);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.25rem 0;font-size:0.95rem}
+.easter-card hr{border:none;border-top:1px solid var(--border);margin:1.5rem 0}
+.easter-card .inspo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0}
+.easter-card .inspo-item{background:var(--light);padding:1rem;border-radius:8px;text-align:center}
+.easter-card .inspo-item .big{font-size:1.5rem;font-weight:700;color:var(--navy);display:block}
+.easter-card .inspo-item .lbl{font-size:0.8rem;color:var(--gray)}
+.easter-card .signoff{font-size:0.9rem;color:var(--gray);margin-top:1.5rem}
+
+/* LANGUAGE TOGGLE */
+.lang-en, .lang-fr{transition:opacity 0.15s}
+.lang-fr{display:none}
+body.fr .lang-en{display:none}
+body.fr .lang-fr{display:block}
+
+/* FOOTER */
+footer{text-align:center;padding:1.25rem;color:var(--gray);font-size:0.75rem;margin-top:auto;border-top:1px solid var(--border);background:var(--white)}
+
+/* RESPONSIVE */
+@media(max-width:480px){
+  header h1{font-size:0.95rem}
+  header img{height:34px}
+  .easter-hero{padding:2rem 0.75rem}
+  .easter-hero h2{font-size:1.8rem}
+  .easter-content{padding:1rem}
+  .easter-card{padding:1.25rem}
+  .easter-card .inspo{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<a href="/"><img src="/logo-balance.png" alt="Balance - Service Animal Access Guide"></a>
+<h1 class="lang-en">Service Animal Access Guide</h1>
+<h1 class="lang-fr">Guide d'accès — Animaux d'assistance</h1>
+<div class="lang-toggle">
+<button class="lang-btn active" onclick="document.body.className='';this.classList.add('active');this.nextElementSibling.classList.remove('active')">EN</button>
+<button class="lang-btn" onclick="document.body.className='fr';this.classList.add('active');this.previousElementSibling.classList.remove('active')">FR</button>
+</div>
+</div>
+</header>
+
+<section class="easter-hero">
+<div class="easter-hero-inner lang-en">
+<h2>Hi Blayne 👋</h2>
+<p class="sub">This page is for you — thanks for the inspiration.</p>
+<p class="tagline">Pan-Canada · Part 5 · Responsabilités et exclusions</p>
+</div>
+<div class="easter-hero-inner lang-fr">
+<h2>Salut Blayne 👋</h2>
+<p class="sub">Cette page est pour toi — merci pour l'inspiration.</p>
+<p class="tagline">Pan-Canada · Partie 5 · Responsabilités et exclusions</p>
+</div>
+</section>
+
+<div class="easter-content">
+<div class="easter-card lang-en">
+<p>This whole site exists because of you, Blayne. Your suggestions shaped two of its most important features:</p>
+
+<div class="inspo">
+<div class="inspo-item">
+<span class="big">🌎</span>
+<span class="lbl">Pan-Canada</span>
+</div>
+<div class="inspo-item">
+<span class="big">📋</span>
+<span class="lbl">Part 5 — Exceptions &amp; Handler's Responsibility</span>
+</div>
+</div>
+
+<p>What started as an Ontario guide became a resource for all 13 provinces and territories — because you saw the need for something bigger. And Part 5 in every province guide (the responsibilities, the exceptions, what businesses need to know) exists because you pushed for it.</p>
+
+<div class="highlight">
+<strong>Blayne's mark on the site:</strong><br>
+→ Pan-Canada : 13 province guides, from ON to NU<br>
+→ Part 5 : Exceptions &amp; Handler's Responsibility on every single province page<br>
+→ The honest, practical tone — "Terrain-ready · 4-minute reads · Verified legislation"
+</div>
+
+<p>Show this to your friends. You earned it.</p>
+
+<p class="signoff">— Patrick &amp; the serviceanimal.ca team</p>
+</div>
+
+<div class="easter-card lang-fr">
+<p>Ce site entier existe grâce à toi, Blayne. Tes suggestions ont façonné deux de ses fonctionnalités les plus importantes :</p>
+
+<div class="inspo">
+<div class="inspo-item">
+<span class="big">🌎</span>
+<span class="lbl">Pan-Canada</span>
+</div>
+<div class="inspo-item">
+<span class="big">📋</span>
+<span class="lbl">Partie 5 — Exceptions et responsabilités</span>
+</div>
+</div>
+
+<p>Ce qui a commencé comme un guide Ontario est devenu une ressource pour les 13 provinces et territoires — parce que tu as vu le besoin de quelque chose de plus grand. Et la Partie 5 dans chaque guide provincial (les exceptions, les responsabilités, ce que les entreprises doivent savoir) existe parce que tu as poussé pour ça.</p>
+
+<div class="highlight">
+<strong>L'empreinte de Blayne sur le site :</strong><br>
+→ Pan-Canada : 13 guides provinciaux, de ON à NU<br>
+→ Partie 5 : Exceptions et responsabilités du maître-chien sur chaque page provinciale<br>
+→ Le ton honnête et pratique — « Pour le terrain · 4 minutes · Législation vérifiée »
+</div>
+
+<p>Montre ça à tes amis. Tu l'as mérité.</p>
+
+<p class="signoff">— Patrick &amp; l'équipe serviceanimal.ca</p>
+</div>
+</div>
+
+<footer>
+<p class="lang-en">Built for Blayne, inspired by a good conversation. · serviceanimal.ca</p>
+<p class="lang-fr">Construit pour Blayne, inspiré par une bonne conversation. · serviceanimal.ca</p>
+</footer>
+</body>
+</html>
