@@ -4,28 +4,29 @@
 <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
 <link rel="icon" type="image/png" sizes="128x128" href="/favicon-128.png">
 <style>
+/* === RESET === */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+/* === VARIABLES === */
 :root{--navy:#16213e;--light:#f5f6fa;--blue:#2563eb;--white:#fff;--text:#1a1a2e;--border:#e0e7ff;--gray:#64748b;--radius:10px;--shadow:0 1px 4px rgba(0,0,0,.08)}
+/* === BASE === */
 html{scroll-behavior:smooth}
 body{font-family:system-ui,-apple-system,sans-serif;color:var(--text);background:var(--light);line-height:1.6}
+/* === HEADER === */
 header{background:var(--navy);color:var(--white);padding:0.6rem 1rem;min-height:64px;display:flex;align-items:center}
-.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0.75rem;flex-wrap:wrap}
+.header-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0.75rem;flex-wrap:wrap}
 .header-logo{height:48px;width:auto;flex-shrink:0}
 .header-text{text-align:center}
 header h1{font-size:1.2rem;margin:0;line-height:1.3}
 header p{font-size:0.78rem;opacity:0.8;margin-top:0.05rem}
+/* === PROVINCE SELECTOR === */
 .province-selector{display:flex;align-items:center;gap:0.35rem}
 .province-selector label{font-size:0.78rem;opacity:0.9;white-space:nowrap}
 .province-selector select{padding:0.3rem 0.4rem;border-radius:5px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.12);color:var(--white);font-size:0.82rem;cursor:pointer;max-width:160px}
 .province-selector select option{background:var(--navy);color:var(--white)}
-.hamburger{display:none;background:none;border:none;color:var(--white);font-size:1.6rem;cursor:pointer;padding:0.2rem;line-height:1;margin-left:auto}
-.page-layout{display:flex;gap:1.5rem;max-width:1200px;margin:1rem auto;padding:0 1rem}
-.page-layout nav.sidebar{width:220px;flex-shrink:0;position:sticky;top:0.5rem;align-self:flex-start;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:0.5rem 0;max-height:calc(100vh - 1rem);overflow-y:auto}
-nav.sidebar a{display:block;padding:0.4rem 0.75rem;color:var(--navy);text-decoration:none;font-size:0.82rem;border-left:3px solid transparent;transition:background 0.15s,border-color 0.15s}
-nav.sidebar a:hover,nav.sidebar a.active{background:var(--border);border-left-color:var(--blue);font-weight:600}
-nav.sidebar .part-label{font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--gray);padding:0.5rem 0.75rem 0.15rem;border-left-color:transparent}
-nav.sidebar .part-label:hover{background:transparent;border-left-color:transparent}
-main{flex:1;min-width:0;background:var(--white);padding:1.5rem 2rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+/* === LAYOUT === */
+.page-layout{max-width:860px;margin:1rem auto;padding:0 1rem}
+/* === MAIN === */
+main{min-width:0;background:var(--white);padding:1.5rem 2rem;border-radius:var(--radius);box-shadow:var(--shadow)}
 main h1{font-size:1.6rem;margin-bottom:0.75rem;color:var(--navy);border-bottom:2px solid var(--border);padding-bottom:0.4rem}
 main h2{font-size:1.2rem;margin:1.25rem 0 0.5rem;color:#1e3a5f}
 main h3{font-size:1.05rem;margin:1rem 0 0.4rem;color:#2d4a74}
@@ -37,14 +38,24 @@ main hr{margin:1.2rem 0;border:none;border-top:1px solid var(--border)}
 main blockquote{background:#f0f4ff;border-left:4px solid var(--blue);padding:0.6rem 1rem;margin:0.75rem 0;border-radius:0 6px 6px 0}
 main .btn{display:inline-block;background:var(--blue);color:var(--white)!important;text-decoration:none!important;padding:0.5rem 1.1rem;border-radius:6px;font-weight:600;font-size:0.88rem;transition:background 0.2s}
 main .btn:hover{background:#1d4ed8}
+main .btn-outline{display:inline-block;background:transparent;color:var(--blue)!important;text-decoration:none!important;padding:0.45rem 1rem;border-radius:6px;font-weight:600;font-size:0.88rem;border:2px solid var(--blue);transition:all 0.2s}
+main .btn-outline:hover{background:var(--blue);color:var(--white)!important}
+/* === PART NAV (PILLS) === */
 .part-nav{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;padding:0.75rem;background:var(--light);border-radius:8px}
 .part-nav a{display:inline-block;padding:0.35rem 0.65rem;color:var(--navy);text-decoration:none;border-radius:5px;font-size:0.82rem;background:var(--white);border:1px solid var(--border);transition:all 0.15s}
 .part-nav a:hover{background:var(--blue);color:var(--white);border-color:var(--blue)}
+/* === SECTIONS === */
 .part{scroll-margin-top:1rem;padding-top:0.5rem}
 .part h2{display:flex;align-items:center;gap:0.5rem;border-bottom:2px solid var(--border);padding-bottom:0.35rem}
+.part h2.lang-fr{display:none!important}
+body.fr .part h2.lang-en{display:none}
+body.fr .part h2.lang-fr{display:flex}
 .part h2 .part-num{background:var(--navy);color:var(--white);font-size:0.75rem;border-radius:50%;width:1.6em;height:1.6em;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+/* === FOOTER === */
 footer{text-align:center;padding:1.25rem;color:var(--gray);font-size:0.78rem;margin-top:1rem;border-top:1px solid var(--border);background:var(--white)}
+/* === BACK TO TOP === */
 .back-top{display:block;text-align:right;font-size:0.8rem;margin-top:0.5rem}
+/* === RESPONSIVE === */
 @media(max-width:768px){
   header{padding:0.5rem 0.6rem}
   .header-inner{gap:0.4rem}
@@ -54,17 +65,11 @@ footer{text-align:center;padding:1.25rem;color:var(--gray);font-size:0.78rem;mar
   header p{font-size:0.72rem}
   .province-selector{order:3;width:100%}
   .province-selector select{width:100%;max-width:none}
-  .hamburger{display:block;order:2}
-  .page-layout{flex-direction:column;padding:0 0.5rem;margin:0.5rem auto}
-  .page-layout nav.sidebar{width:100%;display:none;position:static;max-height:none;margin-bottom:0;border-radius:var(--radius)}
-  .page-layout nav.sidebar.open{display:block}
+  .page-layout{padding:0 0.5rem;margin:0.5rem auto}
   main{padding:1rem;border-radius:8px}
   main h1{font-size:1.3rem}
   .part-nav{gap:0.25rem;padding:0.5rem}
   .part-nav a{font-size:0.78rem;padding:0.3rem 0.5rem}
-}
-@media(min-width:769px){
-  .page-layout nav.sidebar{display:block!important}
 }
 </style>
 </head>
